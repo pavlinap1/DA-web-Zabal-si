@@ -1,10 +1,10 @@
 import React from 'react';
-import { render } from 'react-dom';
+import './style.css';
 
 const UvodniSTR = () => {
   return (
     <>
-      <img />
+      <img src="img/mapa.jpg" />
       <p>
         Vítáme Vás na stránce Zabal si, která slouží k plánování dovolené či
         jiné cesty.
@@ -19,3 +19,5 @@ export default UvodniSTR;
 //https://www.codegrepper.com/code-examples/javascript/how+to+scroll+window+onclick+button+scrollbar+js
 
 //https://stackoverflow.com/questions/18071046/smooth-scroll-to-specific-div-on-click/18071231
+
+//Obrázek nefunguje

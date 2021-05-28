@@ -15,5 +15,4 @@ const App = () => {
     </>
   );
 };
-
 render(<App />, document.querySelector('#app'));

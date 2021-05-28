@@ -1,0 +1,11 @@
+button {
+  background: lightgray;
+  transition: 0.25s;
+  min-width: 100px;
+  border: 1px solid gray;
+  height: 40px;
+}
+button:hover {
+  background: grey;
+  color: white;
+}

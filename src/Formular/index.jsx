@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './style.css';
 
 const Formular = () => {
   const [zeme, setZeme] = useState('Česká republika');
@@ -15,69 +16,78 @@ const Formular = () => {
     );
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Země:
-        <select onChange={(e) => setZeme(e.target.value)} value={zeme}>
-          <option value="Česká republika">Česká republika</option>
-          <option value="Slovensko">Slovensko</option>
-          <option value="Chorvatsko">Chorvatsko</option>
-          <option value="Itálie">Itálie</option>
-        </select>
-      </label>
-      <label>
-        Město:
-        <input
-          type="text"
-          onChange={(e) => setMesto(e.target.value)}
-          value={mesto}
-        ></input>
-      </label>
-      <label>
-        Odjezd:
-        <input
-          type="date"
-          id="start"
-          min="2021-05-27"
-          max="2021-12-31"
-          onChange={(e) => setOdjezd(e.target.value)}
-        ></input>
-      </label>
-      <label>
-        Příjezd:
-        <input
-          type="date"
-          id="start"
-          min="2021-05-27"
-          max="2021-12-31"
-          onChange={(e) => setPrijezd(e.target.value)}
-        ></input>
-      </label>
+    <>
+      <form onSubmit={handleSubmit}>
+        <h1>Formulář</h1>
+        <label>
+          Země:
+          <select onChange={(e) => setZeme(e.target.value)} value={zeme}>
+            <option value="Česká republika">Česká republika</option>
+            <option value="Slovensko">Slovensko</option>
+            <option value="Chorvatsko">Chorvatsko</option>
+            <option value="Itálie">Itálie</option>
+          </select>
+        </label>
+        <label>
+          Město:
+          <input
+            type="text"
+            onChange={(e) => setMesto(e.target.value)}
+            value={mesto}
+          ></input>
+        </label>
+        <label>
+          Odjezd:
+          <input
+            type="date"
+            id="start"
+            min="2021-05-27"
+            max="2021-12-31"
+            onChange={(e) => setOdjezd(e.target.value)}
+          ></input>
+        </label>
+        <label>
+          Příjezd:
+          <input
+            type="date"
+            id="start"
+            min="2021-05-27"
+            max="2021-12-31"
+            onChange={(e) => setPrijezd(e.target.value)}
+          ></input>
+        </label>
 
-      <label>
-        Počet zavazadel:
-        <select
-          onChange={(e) => setPocetZavazadel(e.target.value)}
-          value={pocetZavazadel}
-        >
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
-      </label>
-      <label>
-        Kam jedu:
-        <select onChange={(e) => setKamJedu(e.target.value)} value={kamJedu}>
-          <option value="K moři">K moři</option>
-          <option value="Na hory">Na hory</option>
-          <option value="Na služební cesty">Na služební cestu</option>
-          <option value="Na čundr">Na čundr</option>
-        </select>
-      </label>
-      <button type="reset">Zrušit</button>
-      <button type="submit">OK</button>
-    </form>
+        <label>
+          Počet zavazadel:
+          <select
+            onChange={(e) => setPocetZavazadel(e.target.value)}
+            value={pocetZavazadel}
+          >
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </label>
+        <label>
+          Kam jedu:
+          <select onChange={(e) => setKamJedu(e.target.value)} value={kamJedu}>
+            <option value="K moři">K moři</option>
+            <option value="Na hory">Na hory</option>
+            <option value="Na služební cesty">Na služební cestu</option>
+            <option value="Na čundr">Na čundr</option>
+          </select>
+        </label>
+        <div className="tlacitka">
+          <button className="tlacitko1" type="reset">
+            Zrušit
+          </button>
+          <button className="tlacitko2" type="submit">
+            OK
+          </button>
+        </div>
+      </form>
+    </>
   );
 };
 
