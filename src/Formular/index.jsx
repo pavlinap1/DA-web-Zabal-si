@@ -8,7 +8,10 @@ const Formular = () => {
   const [odjezd, setOdjezd] = useState('');
   const [pocetZavazadel, setPocetZavazadel] = useState('0');
   const [kamJedu, setKamJedu] = useState('K moři');
-
+  const [openForm, setOpenForm] = useState(false);
+  const handleClick = () => {
+    setOpenForm(!openForm);
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(
@@ -17,7 +20,13 @@ const Formular = () => {
   };
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <div className="body">
+        <button onClick={handleClick}>Vyplnit formulář</button>
+      </div>
+      <form
+        className={openForm ? 'form' : 'form--closed'}
+        onSubmit={handleSubmit}
+      >
         <h1>Formulář</h1>
         <label>
           Země:

@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Formular from '../Formular';
 import './style.css';
 
 const UvodniSTR = () => {
   return (
     <>
-      <img src="img/mapa.jpg" />
+    <div className="body">
+      <img src="assets/mapa.jpg" />
       <p>
         Vítáme Vás na stránce Zabal si, která slouží k plánování dovolené či
         jiné cesty.
       </p>
       <p>Na začátku si můžete vyplnit formulář o vaší cestě.</p>
-      <button>Vyplnit formulář</button>
+      <Formular className="form" />
+    </div>
     </>
   );
 };
@@ -20,4 +23,6 @@ export default UvodniSTR;
 
 //https://stackoverflow.com/questions/18071046/smooth-scroll-to-specific-div-on-click/18071231
 
-//Obrázek nefunguje
+//Obrázek už funguje, všechny img dávat do složky assets
+//na button onClick se stylem (display:none) pro zobrazení formuláře
+//Opravit fail s tlačítkem (možná bude fungovat až se obě komponenty nějak spojí)

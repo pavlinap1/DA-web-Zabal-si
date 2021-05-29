@@ -1,3 +1,8 @@
+img {
+  width: 400px;
+  border: 2px solid lightblue;
+}
+
 button {
   background: lightgray;
   transition: 0.25s;
@@ -8,4 +13,11 @@ button {
 button:hover {
   background: grey;
   color: white;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

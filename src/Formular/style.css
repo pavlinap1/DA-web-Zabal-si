@@ -3,9 +3,7 @@ form {
   width: 400px;
   padding: 10px;
 }
-h1 {
-  text-align: center;
-}
+
 label {
   flex-direction: column;
   display: flex;
@@ -32,3 +30,11 @@ form input[type='submit']:hover {
   padding-left: 30px;
   padding-right: 30px;
 }
+form {
+  display: block;
+}
+
+.form--closed {
+  display: none;
+}
+
