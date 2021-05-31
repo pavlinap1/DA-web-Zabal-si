@@ -30,7 +30,11 @@ const Formular = () => {
         <h1>Formulář</h1>
         <label>
           Země:
-          <select onChange={(e) => setZeme(e.target.value)} value={zeme}>
+          <select
+            onChange={(e) => setZeme(e.target.value)}
+            value={zeme}
+            zeme={zeme}
+          >
             <option value="Česká republika">Česká republika</option>
             <option value="Slovensko">Slovensko</option>
             <option value="Chorvatsko">Chorvatsko</option>
