@@ -19,6 +19,7 @@ const App = () => {
         <Route exact path="/vizitka"></Route>
         <Switch />
       </Router>
+      <p>blabla</p>
     </>
   );
 };
