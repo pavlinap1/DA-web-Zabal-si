@@ -1,6 +1,17 @@
 import React, { useState } from 'react';
 import './style.css';
 
+const VyberZeme = ({ zeme }) => {
+  return (
+    <>
+      <option value="Česká republika">Česká republika</option>
+      <option value="Slovensko">Slovensko</option>
+      <option value="Chorvatsko">Chorvatsko</option>
+      <option value="Itálie">Itálie</option>
+    </>
+  );
+};
+
 const Formular = () => {
   const [zeme, setZeme] = useState('Česká republika');
   const [mesto, setMesto] = useState('');
@@ -30,15 +41,9 @@ const Formular = () => {
         <h1>Formulář</h1>
         <label>
           Země:
-          <select
-            onChange={(e) => setZeme(e.target.value)}
-            value={zeme}
-            zeme={zeme}
-          >
-            <option value="Česká republika">Česká republika</option>
-            <option value="Slovensko">Slovensko</option>
-            <option value="Chorvatsko">Chorvatsko</option>
-            <option value="Itálie">Itálie</option>
+          <select onChange={(e) => setZeme(e.target.value)} value={zeme}>
+            {' '}
+            <VyberZeme />
           </select>
         </label>
         <label>

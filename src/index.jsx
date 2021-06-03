@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Header from './Header';
+import { Obleceni } from './More-obleceni';
 import './style.css';
 import UvodniSTR from './UvodniSTR';
 import Vizitka from './Vizitka';
@@ -15,11 +16,11 @@ const App = () => {
         <Route exact path="/">
           <UvodniSTR />
           <Vizitka />
+          <Obleceni />
         </Route>
         <Route exact path="/vizitka"></Route>
         <Switch />
       </Router>
-      <p>blabla</p>
     </>
   );
 };

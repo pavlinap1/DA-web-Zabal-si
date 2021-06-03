@@ -51,11 +51,21 @@ const KurzovniListek = () => {
   );
 };
 
+const InformaceOCeste = () => {
+  return (
+    <>
+      <h2>Uživatel si jako cílovou zemi vybral: </h2>
+    </>
+  );
+};
 const Vizitka = () => {
   return (
-    <div>
-      <KurzovniListek />
-    </div>
+    <>
+      <div>
+        <InformaceOCeste />
+        <KurzovniListek />
+      </div>
+    </>
   );
 };
 
