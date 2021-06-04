@@ -3,12 +3,12 @@ import { db } from '../db.js';
 import firebase from 'firebase/app';
 import './style.css';
 
-const MDoklady = () => {
+const CObleceni = () => {
   const [polozky, setPolozky] = useState([]);
 
   useEffect(() => {
     const uklidPoSobe = db
-      .collection('more-doklady')
+      .collection('cundr-obleceni')
       .orderBy('datumVytvoreni')
       .onSnapshot((snapshot) => {
         setPolozky(
@@ -31,9 +31,8 @@ const MDoklady = () => {
 
   return (
     <>
-      <h1>K moři</h1>
       <div>
-        <button onClick={handleClick}>Doklady</button>
+        <button onClick={handleClick}>Oblečení</button>
         <div className={openList ? 'seznam' : 'seznam--closed'}>
           <ul>
             {polozky.map((polozka) => (
@@ -41,7 +40,7 @@ const MDoklady = () => {
                 {polozka.nazev}
                 <button
                   onClick={() =>
-                    db.collection('more-doklady').doc(polozka.id).delete()
+                    db.collection('cundr-obleceni').doc(polozka.id).delete()
                   }
                 >
                   Odstranit
@@ -52,7 +51,7 @@ const MDoklady = () => {
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              db.collection('more-doklady').add({
+              db.collection('cundr-obleceni').add({
                 nazev: pridaniPolozky,
                 datumVytvoreni: firebase.firestore.FieldValue.serverTimestamp(),
               });
@@ -74,4 +73,4 @@ const MDoklady = () => {
   );
 };
 
-export default MDoklady;
+export default CObleceni;
