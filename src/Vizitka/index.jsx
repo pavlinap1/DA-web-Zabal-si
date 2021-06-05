@@ -56,10 +56,23 @@ const KurzovniListek = () => {
 
 const Vizitka = ({ dataToVizitka }) => {
   const typSeznam = seznam.find((i) => dataToVizitka.kamJedu === i.name);
+  const [stateSeznam, setStateSeznam] = useState(typSeznam);
+
+  const handleZmenaSeznamu = (name, data) => {
+    console.log(name, data);
+    const newSeznam = { ...stateSeznam };
+
+    setStateSeznam(newSeznam);
+  };
   const kufrSeznam = [];
   for (let i = 0; i < dataToVizitka.pocetZavazadel; i += 1) {
     kufrSeznam.push(
-      <Kufr key={'kuf' + i} index={i + 1} typPolozka={typSeznam} />,
+      <Kufr
+        key={'kuf' + i}
+        index={i + 1}
+        typPolozka={stateSeznam}
+        onZmenaSeznamu={handleZmenaSeznamu}
+      />,
     );
   }
   return (

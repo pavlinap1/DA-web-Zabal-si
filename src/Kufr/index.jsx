@@ -62,10 +62,10 @@ const Polozka = ({ typPolozka, onZmenaSeznamu }) => {
     </>
   );
 };
-const Kufr = ({ typPolozka, index }) => {
+const Kufr = ({ typPolozka, index, onZmenaSeznamu }) => {
   const [openSeznam, setOpenSeznam] = useState(false);
   const handleZmenaSeznamu = (nazev, data) => {
-    console.log(nazev, data);
+    onZmenaSeznamu(nazev, data);
   };
   const handleOpenSeznnam = () => {
     setOpenSeznam(!openSeznam);
