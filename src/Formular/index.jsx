@@ -27,7 +27,7 @@ const Formular = ({ onFormOK }) => {
   const [mesto, setMesto] = useState('');
   const [prijezd, setPrijezd] = useState('');
   const [odjezd, setOdjezd] = useState('');
-  const [pocetZavazadel, setPocetZavazadel] = useState('0');
+  const [pocetZavazadel, setPocetZavazadel] = useState(0);
   const [kamJedu, setKamJedu] = useState('');
   const [openForm, setOpenForm] = useState(false);
   const handleClick = () => {
@@ -114,10 +114,10 @@ const Formular = ({ onFormOK }) => {
             onChange={(e) => setPocetZavazadel(e.target.value)}
             value={pocetZavazadel}
           >
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
+            <option value={0}>0</option>
+            <option value={1}>1</option>
+            <option value={2}>2</option>
+            <option value={3}>3</option>
           </select>
         </label>
         <label>

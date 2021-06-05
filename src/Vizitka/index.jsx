@@ -56,7 +56,10 @@ const KurzovniListek = () => {
 
 const Vizitka = ({ dataToVizitka }) => {
   const typSeznam = seznam.find((i) => dataToVizitka.kamJedu === i.name);
-
+  const kufrSeznam = [];
+  for (let i = 0; i < dataToVizitka.pocetZavazadel; i += 1) {
+    kufrSeznam.push(<Kufr key={'kuf' + i} typPolozka={typSeznam} />);
+  }
   return (
     <>
       <div className="vizitka">
@@ -66,8 +69,7 @@ const Vizitka = ({ dataToVizitka }) => {
           {dataToVizitka.pocetZavazadel} a jedeš {dataToVizitka.kamJedu}.
         </p>
         <KurzovniListek />
-
-        <Kufr typPolozka={typSeznam} />
+        {kufrSeznam}
       </div>
     </>
   );
