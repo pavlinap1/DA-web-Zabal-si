@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './style.css';
+import { useHistory } from 'react-router-dom';
 
 const VyberZeme = ({ zeme }) => {
   return (
@@ -20,6 +21,7 @@ const VyberZeme = ({ zeme }) => {
 };
 
 const Formular = ({ onFormOK }) => {
+  let history = useHistory();
   const [zeme, setZeme] = useState('');
   const [mesto, setMesto] = useState('');
   const [prijezd, setPrijezd] = useState('');
