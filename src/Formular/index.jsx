@@ -19,7 +19,7 @@ const VyberZeme = ({ zeme }) => {
   );
 };
 
-const Formular = () => {
+const Formular = ({ onFormOK }) => {
   const [zeme, setZeme] = useState('');
   const [mesto, setMesto] = useState('');
   const [prijezd, setPrijezd] = useState('');
@@ -35,6 +35,8 @@ const Formular = () => {
     console.log(
       `Uživatel jede do ${zeme} do ${mesto}, má ${pocetZavazadel} zavazadel a jede ${kamJedu}. Odjíždí ${odjezd} a přijíždí ${prijezd}`,
     );
+
+    onFormOK();
   };
   const handleResetClick = () => {
     setZeme('');
