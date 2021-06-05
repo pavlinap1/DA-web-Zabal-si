@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 import { seznam } from '../seznam';
 import './style.css';
 
-const Sekce = ({ jmeno, data }) => {
+const Sekce = ({ jmeno, data, onPolozkaPridana }) => {
   const [novaPolozka, setNovaPolozka] = useState('');
-  const [seznamPolozek, setSeznamPolozek] = useState(data);
   const handleClickPolozka = () => {
-    const novySeznamPolozek = [novaPolozka].concat(seznamPolozek);
-    setSeznamPolozek(novySeznamPolozek);
+    const novySeznamPolozek = [novaPolozka].concat(data);
+    onPolozkaPridana(novySeznamPolozek);
   };
 
   return (
@@ -15,7 +14,7 @@ const Sekce = ({ jmeno, data }) => {
       <div>
         <h2 className="nazevSekce">{jmeno}</h2>
         <ul>
-          {seznamPolozek.map((polozka, index) => (
+          {data.map((polozka, index) => (
             <li key={'il' + index}> {polozka}</li>
           ))}
           <input
@@ -29,16 +28,40 @@ const Sekce = ({ jmeno, data }) => {
   );
 };
 
-const Polozka = ({ typPolozka }) => (
-  <>
-    <Sekce jmeno={'Cestovní doklady'} data={typPolozka.cestovniDoklady} />
-    <Sekce jmeno={'Oblečení'} data={typPolozka.obleceni} />
-    <Sekce jmeno={'Hygiena'} data={typPolozka.hygiena} />
-    <Sekce jmeno={'Elektronika'} data={typPolozka.elektronika} />
-    <Sekce jmeno={'Ostatní'} data={typPolozka.ostatni} />
-  </>
-);
-
+const Polozka = ({ typPolozka }) => {
+  const handlePridanaPolozka = (nazev, data) => {
+    console.log(nazev, data);
+  };
+  return (
+    <>
+      <Sekce
+        jmeno={'Cestovní doklady'}
+        data={typPolozka.cestovniDoklady}
+        onPolozkaPridana={(d) => handlePridanaPolozka('Cestovní Doklady', d)}
+      />
+      <Sekce
+        jmeno={'Oblečení'}
+        data={typPolozka.obleceni}
+        onPolozkaPridana={(d) => handlePridanaPolozka('Oblečení', d)}
+      />
+      <Sekce
+        jmeno={'Hygiena'}
+        data={typPolozka.hygiena}
+        onPolozkaPridana={(d) => handlePridanaPolozka('Hygiena', d)}
+      />
+      <Sekce
+        jmeno={'Elektronika'}
+        data={typPolozka.elektronika}
+        onPolozkaPridana={(d) => handlePridanaPolozka('Elektronika', d)}
+      />
+      <Sekce
+        jmeno={'Ostatní'}
+        data={typPolozka.ostatni}
+        onPolozkaPridana={(d) => handlePridanaPolozka('Ostatní', d)}
+      />
+    </>
+  );
+};
 const Kufr = ({ typPolozka, index }) => {
   const [openSeznam, setOpenSeznam] = useState(false);
   const handleOpenSeznnam = () => {
