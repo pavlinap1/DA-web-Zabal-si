@@ -51,19 +51,15 @@ const KurzovniListek = () => {
   );
 };
 
-const InformaceOCeste = () => {
-  return (
-    <>
-      <h2>Uživatel si jako cílovou zemi vybral: </h2>
-    </>
-  );
-};
 const Vizitka = ({ dataToVizitka }) => {
-  console.log(dataToVizitka);
   return (
     <>
       <div className="vizitka">
-        <InformaceOCeste />
+        <p>
+          Jedeš do {dataToVizitka.zeme} {dataToVizitka.mesto} od{' '}
+          {dataToVizitka.odjezd} do {dataToVizitka.prijezd}, zavazadel máš{' '}
+          {dataToVizitka.pocetZavazadel} a jedeš {dataToVizitka.kamJedu}.
+        </p>
         <KurzovniListek />
       </div>
     </>
