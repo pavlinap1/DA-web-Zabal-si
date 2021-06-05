@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { seznam } from '../seznam';
-
 import Kufr from '../Kufr';
 import './style.css';
 
@@ -58,7 +57,6 @@ const KurzovniListek = () => {
 const Vizitka = ({ dataToVizitka }) => {
   const typSeznam = seznam.find((i) => dataToVizitka.kamJedu === i.name);
 
-
   return (
     <>
       <div className="vizitka">
@@ -69,9 +67,7 @@ const Vizitka = ({ dataToVizitka }) => {
         </p>
         <KurzovniListek />
 
-        <Kufr
-          typPolozka={typSeznam}
-        />
+        <Kufr typPolozka={typSeznam} />
       </div>
     </>
   );

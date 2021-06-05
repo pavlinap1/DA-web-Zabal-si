@@ -73,7 +73,7 @@ const Formular = ({ onFormOK }) => {
       >
         <h1>Formulář</h1>
         <label>
-          Země:
+          Cílová země:
           <select onChange={(e) => setZeme(e.target.value)} value={zeme}>
             {' '}
             <VyberZeme />
