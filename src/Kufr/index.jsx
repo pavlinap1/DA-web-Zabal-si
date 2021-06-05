@@ -39,7 +39,7 @@ const Polozka = ({ typPolozka }) => (
   </>
 );
 
-const Kufr = ({ typPolozka }) => {
+const Kufr = ({ typPolozka, index }) => {
   const [openSeznam, setOpenSeznam] = useState(false);
   const handleOpenSeznnam = () => {
     setOpenSeznam(!openSeznam);
@@ -47,6 +47,7 @@ const Kufr = ({ typPolozka }) => {
 
   return (
     <>
+      <h3>{`Kufr ${index}`}</h3>
       <div className="obrazekkufr" onClick={handleOpenSeznnam}>
         <img src="assets/kufr.png" />
       </div>
