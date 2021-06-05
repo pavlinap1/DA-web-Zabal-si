@@ -8,12 +8,11 @@ import Vizitka from './Vizitka';
 import Formular from './Formular';
 
 const App = () => {
-  const [appDataForm, setAppDataForm] = useState(null);
-  
+  const [appDataForm, setAppDataForm] = useState('null');
+
   const handleFormOK = (datazform) => {
     setAppDataForm(datazform);
   };
-
 
   return (
     <>
