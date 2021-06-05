@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { seznam } from '../seznam';
+import './style.css';
 
 const Mena = ({ select }) => {
   const [from, setFrom] = useState('');
