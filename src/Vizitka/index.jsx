@@ -58,7 +58,9 @@ const Vizitka = ({ dataToVizitka }) => {
   const typSeznam = seznam.find((i) => dataToVizitka.kamJedu === i.name);
   const kufrSeznam = [];
   for (let i = 0; i < dataToVizitka.pocetZavazadel; i += 1) {
-    kufrSeznam.push(<Kufr key={'kuf' + i} typPolozka={typSeznam} />);
+    kufrSeznam.push(
+      <Kufr key={'kuf' + i} index={i + 1} typPolozka={typSeznam} />,
+    );
   }
   return (
     <>
