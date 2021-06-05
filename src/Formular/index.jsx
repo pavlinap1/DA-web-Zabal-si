@@ -4,21 +4,28 @@ import './style.css';
 const VyberZeme = ({ zeme }) => {
   return (
     <>
+      <option value="">Vyberte si zemi</option>
       <option value="Česká republika">Česká republika</option>
       <option value="Slovensko">Slovensko</option>
       <option value="Chorvatsko">Chorvatsko</option>
       <option value="Itálie">Itálie</option>
+      <option value="Francie">Francie</option>
+      <option value="Spanelsko">Španělsko</option>
+      <option value="Polsko">Polsko</option>
+      <option value="Nemecko">Německo</option>
+      <option value="Rakousko">Rakousko</option>
+      <option value="Norsko">Norsko</option>
     </>
   );
 };
 
 const Formular = () => {
-  const [zeme, setZeme] = useState('Česká republika');
+  const [zeme, setZeme] = useState('');
   const [mesto, setMesto] = useState('');
   const [prijezd, setPrijezd] = useState('');
   const [odjezd, setOdjezd] = useState('');
   const [pocetZavazadel, setPocetZavazadel] = useState('0');
-  const [kamJedu, setKamJedu] = useState('K moři');
+  const [kamJedu, setKamJedu] = useState('');
   const [openForm, setOpenForm] = useState(false);
   const handleClick = () => {
     setOpenForm(!openForm);
@@ -28,6 +35,14 @@ const Formular = () => {
     console.log(
       `Uživatel jede do ${zeme} do ${mesto}, má ${pocetZavazadel} zavazadel a jede ${kamJedu}. Odjíždí ${odjezd} a přijíždí ${prijezd}`,
     );
+  };
+  const handleResetClick = () => {
+    setZeme('');
+    setMesto('');
+    setPrijezd('');
+    setOdjezd('');
+    setPocetZavazadel('');
+    setKamJedu('');
   };
   return (
     <>
@@ -90,6 +105,7 @@ const Formular = () => {
         <label>
           Kam jedu:
           <select onChange={(e) => setKamJedu(e.target.value)} value={kamJedu}>
+            <option value="">Vyberte účel cesty</option>
             <option value="K moři">K moři</option>
             <option value="Na hory">Na hory</option>
             <option value="Na služební cesty">Na služební cestu</option>
@@ -97,7 +113,7 @@ const Formular = () => {
           </select>
         </label>
         <div className="tlacitka">
-          <button className="tlacitko1" type="reset">
+          <button onClick={handleResetClick} className="tlacitko1">
             Zrušit
           </button>
           <button className="tlacitko2" type="submit">
@@ -110,5 +126,3 @@ const Formular = () => {
 };
 
 export default Formular;
-//Reset nefunguje u města, které vypisují sami
-//Najít api knihovnu na výběr zemí
