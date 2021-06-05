@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Header from './Header';
@@ -9,8 +9,11 @@ import Formular from './Formular';
 
 const App = () => {
   const handleFormOK = (datazform) => {
-    console.log(datazform);
+    setAppDataForm(datazform);
   };
+
+  const [appDataForm, setAppDataForm] = useState(null);
+
   return (
     <>
       <div className="container">
@@ -21,7 +24,7 @@ const App = () => {
               <Formular onFormOK={handleFormOK} />
             </Route>
             <Route exact path="/vizitka">
-              <Vizitka />
+              <Vizitka dataToVizitka={appDataForm} />
             </Route>
           </Switch>
         </Router>

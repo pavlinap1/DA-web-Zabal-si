@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-
 const Mena = ({ select }) => {
-  
-
   const [from, setFrom] = useState('');
   useEffect(() => {
     fetch(`https://api.frankfurter.app/latest?from=${select}&to=CZK`)
@@ -61,10 +58,11 @@ const InformaceOCeste = () => {
     </>
   );
 };
-const Vizitka = () => {
+const Vizitka = ({ dataToVizitka }) => {
+  console.log(dataToVizitka);
   return (
     <>
-      <div>
+      <div className="vizitka">
         <InformaceOCeste />
         <KurzovniListek />
       </div>
