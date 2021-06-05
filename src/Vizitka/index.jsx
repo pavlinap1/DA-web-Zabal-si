@@ -66,7 +66,7 @@ const Vizitka = ({ dataToVizitka }) => {
           {dataToVizitka.pocetZavazadel} a jedeš {dataToVizitka.kamJedu}.
         </p>
         <KurzovniListek />
-        <div onClick={zobrazSeznam}>
+        <div className="obrazekkufr" onClick={zobrazSeznam}>
           <img src="assets/kufr.png" />
         </div>
       </div>
