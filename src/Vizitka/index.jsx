@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import seznam from '../seznam';
+import { seznam } from '../seznam';
 
 const Mena = ({ select }) => {
   const [from, setFrom] = useState('');
@@ -54,7 +54,7 @@ const KurzovniListek = () => {
 
 const Vizitka = ({ dataToVizitka }) => {
   const zobrazSeznam = () => {
-    console.log(seznam[0].name);
+    console.log(seznam[0].cestovniDoklady);
   };
   return (
     <>
