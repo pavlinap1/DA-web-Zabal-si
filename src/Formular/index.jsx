@@ -53,7 +53,6 @@ const Formular = () => {
             jiné cesty.
           </p>
           <p>Na začátku si můžete vyplnit formulář o vaší cestě.</p>
-          <Formular className="form" />
         </div>
         <button onClick={handleClick}>Vyplnit formulář</button>
       </div>
