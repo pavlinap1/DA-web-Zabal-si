@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-
-const Tisk = ({ dataToTisk }) => {
-  console.log(dataToTisk);
+const Tisk = ({ dataToTisk: { dataToVizitka, typSeznam } }) => {
   return (
     <>
       <p>
-        Jedeš do {dataToTisk.zeme} {dataToTisk.mesto} od {dataToTisk.odjezd} do{' '}
-        {dataToTisk.prijezd}, zavazadel máš {dataToTisk.pocetZavazadel} a jedeš{' '}
-        {dataToTisk.kamJedu}.
+        Jedeš do {dataToVizitka.zeme} {dataToVizitka.mesto} od{' '}
+        {dataToVizitka.odjezd} do {dataToVizitka.prijezd}, zavazadel máš{' '}
+        {dataToVizitka.pocetZavazadel} a jedeš {dataToVizitka.kamJedu}.
       </p>
       <ul>
-        <li></li>
+        {typSeznam.obleceni.map((polozka, index) => (
+          <li key={'il' + index}> {polozka}</li>
+        ))}
       </ul>
     </>
   );
