@@ -26,7 +26,6 @@ const App = () => {
     setAppDataForm(datazform);
   };
   const handleVizitka = (datazvizitka) => {
-    console.log(JSON.stringify(datazvizitka))
     setDataFromVizitka(datazvizitka);
 
   };
