@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { db } from '../db.js';
+import { db } from './db.js/index.js';
 import firebase from 'firebase/app';
 import './style.css';
 
-const SElektronika = () => {
+const CDoklady = () => {
   const [polozky, setPolozky] = useState([]);
 
   useEffect(() => {
     const uklidPoSobe = db
-      .collection('sluzebka-elektronika')
+      .collection('cundr-doklady')
       .orderBy('datumVytvoreni')
       .onSnapshot((snapshot) => {
         setPolozky(
@@ -31,8 +31,9 @@ const SElektronika = () => {
 
   return (
     <>
+      <h1>Na čundr</h1>
       <div>
-        <button onClick={handleClick}>Elektronika</button>
+        <button onClick={handleClick}>Doklady</button>
         <div className={openList ? 'seznam' : 'seznam--closed'}>
           <ul>
             {polozky.map((polozka) => (
@@ -40,10 +41,7 @@ const SElektronika = () => {
                 {polozka.nazev}
                 <button
                   onClick={() =>
-                    db
-                      .collection('sluzebka-elektronika')
-                      .doc(polozka.id)
-                      .delete()
+                    db.collection('cundr-doklady').doc(polozka.id).delete()
                   }
                 >
                   Odstranit
@@ -54,7 +52,7 @@ const SElektronika = () => {
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              db.collection('sluzebka-elektronika').add({
+              db.collection('cundr-doklady').add({
                 nazev: pridaniPolozky,
                 datumVytvoreni: firebase.firestore.FieldValue.serverTimestamp(),
               });
@@ -76,4 +74,4 @@ const SElektronika = () => {
   );
 };
 
-export default SElektronika;
+export default CDoklady;
