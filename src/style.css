@@ -1,0 +1,58 @@
+html {
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(245, 236, 222);
+  margin: 0;
+}
+
+.hlavicka {
+  max-width: 600px;
+}
+
+img {
+  width: 100%;
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 720px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: white;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+button {
+  background: rgb(222, 245, 245);
+  transition: 0.25s;
+  min-width: 100px;
+  border: 1px solid gray;
+  height: 40px;
+}
+
+button:hover {
+  background-color: rgb(112, 194, 194);
+}
+
+button:disabled {
+  background-color: lightgray;
+  cursor: initial;
+}

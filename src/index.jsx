@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Header from './Header';
 import './style.css';
-import UvodniSTR from './UvodniSTR';
+
 import Vizitka from './Vizitka';
 import MDoklady from './Sablony/MDoklady';
 import MElektronika from './Sablony/MElektronika';
@@ -25,40 +25,43 @@ import SElektronika from './Sablony/SElektronika';
 import SHygiena from './Sablony/SHygiena';
 import SObleceni from './Sablony/SObleceni';
 import SOstatni from './Sablony/SOstatni';
+import Formular from './Formular';
 
 const App = () => {
   return (
     <>
-      <Router>
-        <Header />
-        <Switch />
-        <Route exact path="/">
-          <UvodniSTR />
-          <Vizitka />
-          <MDoklady />
-          <MElektronika />
-          <MHygiena />
-          <MObleceni />
-          <MOstatni />
-          <HDoklady />
-          <HElektronika />
-          <HHygiena />
-          <HObleceni />
-          <HOstatni />
-          <CDoklady />
-          <CElektronika />
-          <CHygiena />
-          <CObleceni />
-          <COstatni />
-          <SDoklady />
-          <SElektronika />
-          <SHygiena />
-          <SObleceni />
-          <SOstatni />
-        </Route>
-        <Route exact path="/vizitka"></Route>
-        <Switch />
-      </Router>
+      <div className="container">
+        <Router>
+          <Header />
+          <Switch />
+          <Route exact path="/">
+            <Formular />
+            <Vizitka />
+            <MDoklady />
+            <MElektronika />
+            <MHygiena />
+            <MObleceni />
+            <MOstatni />
+            <HDoklady />
+            <HElektronika />
+            <HHygiena />
+            <HObleceni />
+            <HOstatni />
+            <CDoklady />
+            <CElektronika />
+            <CHygiena />
+            <CObleceni />
+            <COstatni />
+            <SDoklady />
+            <SElektronika />
+            <SHygiena />
+            <SObleceni />
+            <SOstatni />
+          </Route>
+          <Route exact path="/vizitka"></Route>
+          <Switch />
+        </Router>
+      </div>
     </>
   );
 };
