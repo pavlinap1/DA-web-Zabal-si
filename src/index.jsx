@@ -3,12 +3,13 @@ import { render } from 'react-dom';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Header from './Header';
 import './style.css';
-
+import Tisk from './Tisk';
 import Vizitka from './Vizitka';
 import Formular from './Formular';
 
 const App = () => {
   //const [appDataForm, setAppDataForm] = useState('null');
+  const [dataFromVizitka, setDataFromVizitka] = useState('null');
   const [appDataForm, setAppDataForm] = useState({
     kamJedu: 'K moři',
     mesto: 'praha',
@@ -21,7 +22,9 @@ const App = () => {
   const handleFormOK = (datazform) => {
     setAppDataForm(datazform);
   };
-
+  const handleVizitka = (datazvizitka) => {
+    setDataFromVizitka(datazvizitka);
+  };
   return (
     <>
       <div className="container">
@@ -32,7 +35,10 @@ const App = () => {
               <Formular onFormOK={handleFormOK} />
             </Route>
             <Route exact path="/vizitka">
-              <Vizitka dataToVizitka={appDataForm} />
+              <Vizitka onTiskOK={handleVizitka} dataToVizitka={appDataForm} />
+            </Route>
+            <Route exact path="/tisk">
+              <Tisk dataToTisk={dataFromVizitka} />
             </Route>
           </Switch>
         </Router>

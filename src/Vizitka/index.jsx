@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { seznam } from '../seznam';
 import Kufr from '../Kufr';
 import './style.css';
-
+import { useHistory } from 'react-router-dom';
 const Mena = ({ select }) => {
   const [from, setFrom] = useState('');
   useEffect(() => {
@@ -54,25 +54,20 @@ const KurzovniListek = () => {
   );
 };
 
-const Vizitka = ({ dataToVizitka }) => {
+const Vizitka = ({ dataToVizitka, onTiskOK }) => {
+  let history = useHistory();
   const typSeznam = seznam.find((i) => dataToVizitka.kamJedu === i.name);
-  const [stateSeznam, setStateSeznam] = useState(typSeznam);
-
-  const handleZmenaSeznamu = (name, data) => {
-    console.log(name, data);
-    const newSeznam = { ...stateSeznam };
-
-    setStateSeznam(newSeznam);
+  const handleClickTisk = () => {
+    const dataFromVizitka = { dataToVizitka, typSeznam };
+    onTiskOK(dataFromVizitka);
+    history.push('/tisk');
   };
+
   const kufrSeznam = [];
   for (let i = 0; i < dataToVizitka.pocetZavazadel; i += 1) {
+    const copySeznam = { ...typSeznam };
     kufrSeznam.push(
-      <Kufr
-        key={'kuf' + i}
-        index={i + 1}
-        typPolozka={stateSeznam}
-        onZmenaSeznamu={handleZmenaSeznamu}
-      />,
+      <Kufr key={'kuf' + i} index={i + 1} typPolozka={copySeznam} />,
     );
   }
   return (
@@ -85,6 +80,7 @@ const Vizitka = ({ dataToVizitka }) => {
         </p>
         <KurzovniListek />
         {kufrSeznam}
+        <button onClick={handleClickTisk}>Mám nachystáno, chci tisknout</button>
       </div>
     </>
   );

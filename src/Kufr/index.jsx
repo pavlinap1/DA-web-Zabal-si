@@ -47,7 +47,7 @@ const Polozka = ({ typPolozka, onZmenaSeznamu }) => {
       <Sekce
         jmeno={'Hygiena'}
         data={typPolozka.hygiena}
-        onPolozkaPridana={(d) => handlePridanaPolozka('higyena', d)}
+        onPolozkaPridana={(d) => handlePridanaPolozka('hygiena', d)}
       />
       <Sekce
         jmeno={'Elektronika'}
@@ -62,10 +62,26 @@ const Polozka = ({ typPolozka, onZmenaSeznamu }) => {
     </>
   );
 };
-const Kufr = ({ typPolozka, index, onZmenaSeznamu }) => {
+const Kufr = ({ typPolozka, index }) => {
+  const [stateSeznam, setStateSeznam] = useState(typPolozka);
   const [openSeznam, setOpenSeznam] = useState(false);
-  const handleZmenaSeznamu = (nazev, data) => {
-    onZmenaSeznamu(nazev, data);
+  const handleZmenaSeznamu = (name, data) => {
+    console.log(name, data);
+    const newSeznam = { ...stateSeznam };
+    if (name === 'cestovniDoklady') {
+      newSeznam.cestovniDoklady = data;
+    } else if (name === 'obleceni') {
+      newSeznam.obleceni = data;
+    } else if (name === 'hygiena') {
+      newSeznam.hygiena = data;
+    } else if (name === 'elektronika') {
+      newSeznam.elektronika = data;
+    } else if (name === 'ostatni') {
+      newSeznam.ostatni = data;
+    } else {
+      console.log('Nenalezeno ' + name);
+    }
+    setStateSeznam(newSeznam);
   };
   const handleOpenSeznnam = () => {
     setOpenSeznam(!openSeznam);
@@ -78,7 +94,7 @@ const Kufr = ({ typPolozka, index, onZmenaSeznamu }) => {
         <img src="assets/kufr.png" />
       </div>
       {openSeznam && (
-        <Polozka onZmenaSeznamu={handleZmenaSeznamu} typPolozka={typPolozka} />
+        <Polozka onZmenaSeznamu={handleZmenaSeznamu} typPolozka={stateSeznam} />
       )}
     </>
   );
