@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { seznam } from '../seznam';
+
+import Kufr from '../Kufr';
 import './style.css';
 
 const Mena = ({ select }) => {
@@ -55,9 +57,7 @@ const KurzovniListek = () => {
 
 const Vizitka = ({ dataToVizitka }) => {
   const typSeznam = seznam.find((i) => dataToVizitka.kamJedu === i.name);
-  const zobrazSeznam = () => {
-    console.log(typSeznam);
-  };
+
   return (
     <>
       <div className="vizitka">
@@ -67,9 +67,8 @@ const Vizitka = ({ dataToVizitka }) => {
           {dataToVizitka.pocetZavazadel} a jedeš {dataToVizitka.kamJedu}.
         </p>
         <KurzovniListek />
-        <div className="obrazekkufr" onClick={zobrazSeznam}>
-          <img src="assets/kufr.png" />
-        </div>
+
+        <Kufr typPolozka={typSeznam} />
       </div>
     </>
   );
