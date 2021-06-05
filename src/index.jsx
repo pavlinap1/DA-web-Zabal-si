@@ -6,13 +6,10 @@ import './style.css';
 
 import Vizitka from './Vizitka';
 import Formular from './Formular';
-import { useHistory } from 'react-router-dom';
 
 const App = () => {
-  let history = useHistory();
-
-  const handleFormOK = () => {
-    history.push('/vizitka');
+  const handleFormOK = (datazform) => {
+    console.log(datazform);
   };
   return (
     <>

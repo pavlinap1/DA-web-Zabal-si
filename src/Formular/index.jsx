@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './style.css';
+import { useHistory } from 'react-router-dom';
 
 const VyberZeme = ({ zeme }) => {
   return (
@@ -27,6 +28,9 @@ const Formular = ({ onFormOK }) => {
   const [pocetZavazadel, setPocetZavazadel] = useState('0');
   const [kamJedu, setKamJedu] = useState('');
   const [openForm, setOpenForm] = useState(false);
+
+  let history = useHistory();
+
   const handleClick = () => {
     setOpenForm(!openForm);
   };
@@ -36,7 +40,8 @@ const Formular = ({ onFormOK }) => {
       `Uživatel jede do ${zeme} do ${mesto}, má ${pocetZavazadel} zavazadel a jede ${kamJedu}. Odjíždí ${odjezd} a přijíždí ${prijezd}`,
     );
 
-    onFormOK();
+    onFormOK('blablabla');
+    history.push('/vizitka');
   };
   const handleResetClick = () => {
     setZeme('');
