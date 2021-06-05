@@ -37,27 +37,27 @@ const Polozka = ({ typPolozka, onZmenaSeznamu }) => {
       <Sekce
         jmeno={'Cestovní doklady'}
         data={typPolozka.cestovniDoklady}
-        onPolozkaPridana={(d) => handlePridanaPolozka('Cestovní Doklady', d)}
+        onPolozkaPridana={(d) => handlePridanaPolozka('cestovniDoklady', d)}
       />
       <Sekce
         jmeno={'Oblečení'}
         data={typPolozka.obleceni}
-        onPolozkaPridana={(d) => handlePridanaPolozka('Oblečení', d)}
+        onPolozkaPridana={(d) => handlePridanaPolozka('obleceni', d)}
       />
       <Sekce
         jmeno={'Hygiena'}
         data={typPolozka.hygiena}
-        onPolozkaPridana={(d) => handlePridanaPolozka('Hygiena', d)}
+        onPolozkaPridana={(d) => handlePridanaPolozka('higyena', d)}
       />
       <Sekce
         jmeno={'Elektronika'}
         data={typPolozka.elektronika}
-        onPolozkaPridana={(d) => handlePridanaPolozka('Elektronika', d)}
+        onPolozkaPridana={(d) => handlePridanaPolozka('elektronika', d)}
       />
       <Sekce
         jmeno={'Ostatní'}
         data={typPolozka.ostatni}
-        onPolozkaPridana={(d) => handlePridanaPolozka('Ostatní', d)}
+        onPolozkaPridana={(d) => handlePridanaPolozka('ostatni', d)}
       />
     </>
   );
