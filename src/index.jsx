@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Header from './Header';
@@ -9,11 +9,12 @@ import Formular from './Formular';
 import { useHistory } from 'react-router-dom';
 
 const App = () => {
-  let history = useHistory();
-
-  const handleFormOK = () => {
-    history.push('/vizitka');
+  const handleFormOK = (datazform) => {
+    setAppDataForm(datazform);
   };
+
+  const [appDataForm, setAppDataForm] = useState(null);
+
   return (
     <>
       <div className="container">
@@ -24,7 +25,7 @@ const App = () => {
               <Formular onFormOK={handleFormOK} />
             </Route>
             <Route exact path="/vizitka">
-              <Vizitka />
+              <Vizitka dataToVizitka={appDataForm} />
             </Route>
           </Switch>
         </Router>
