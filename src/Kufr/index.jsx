@@ -28,9 +28,9 @@ const Sekce = ({ jmeno, data, onPolozkaPridana }) => {
   );
 };
 
-const Polozka = ({ typPolozka }) => {
+const Polozka = ({ typPolozka, onZmenaSeznamu }) => {
   const handlePridanaPolozka = (nazev, data) => {
-    console.log(nazev, data);
+    onZmenaSeznamu(nazev, data);
   };
   return (
     <>
@@ -64,6 +64,9 @@ const Polozka = ({ typPolozka }) => {
 };
 const Kufr = ({ typPolozka, index }) => {
   const [openSeznam, setOpenSeznam] = useState(false);
+  const handleZmenaSeznamu = (nazev, data) => {
+    console.log(nazev, data);
+  };
   const handleOpenSeznnam = () => {
     setOpenSeznam(!openSeznam);
   };
@@ -74,7 +77,9 @@ const Kufr = ({ typPolozka, index }) => {
       <div className="obrazekkufr" onClick={handleOpenSeznnam}>
         <img src="assets/kufr.png" />
       </div>
-      {openSeznam && <Polozka typPolozka={typPolozka} />}
+      {openSeznam && (
+        <Polozka onZmenaSeznamu={handleZmenaSeznamu} typPolozka={typPolozka} />
+      )}
     </>
   );
 };
