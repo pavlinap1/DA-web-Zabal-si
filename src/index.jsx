@@ -8,7 +8,15 @@ import Vizitka from './Vizitka';
 import Formular from './Formular';
 
 const App = () => {
-  const [appDataForm, setAppDataForm] = useState('null');
+  //const [appDataForm, setAppDataForm] = useState('null');
+  const [appDataForm, setAppDataForm] = useState({
+    kamJedu: 'Na čundr',
+    mesto: 'praha',
+    odjezd: '2021-06-09',
+    pocetZavazadel: '2',
+    prijezd: '2021-06-19',
+    zeme: 'Slovensko',
+  });
 
   const handleFormOK = (datazform) => {
     setAppDataForm(datazform);
