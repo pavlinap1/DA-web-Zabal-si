@@ -32,10 +32,17 @@ const Formular = ({ onFormOK }) => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(
-      `Uživatel jede do ${zeme} do ${mesto}, má ${pocetZavazadel} zavazadel a jede ${kamJedu}. Odjíždí ${odjezd} a přijíždí ${prijezd}`,
-    );
-    onFormOK();
+    const dataFromFrom = {
+      zeme,
+      mesto,
+      pocetZavazadel,
+      kamJedu,
+      odjezd,
+      prijezd,
+    };
+
+    onFormOK(dataFromFrom);
+    history.push('/vizitka');
   };
   const handleResetClick = () => {
     setZeme('');

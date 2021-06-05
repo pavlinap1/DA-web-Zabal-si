@@ -6,14 +6,14 @@ import './style.css';
 
 import Vizitka from './Vizitka';
 import Formular from './Formular';
-import { useHistory } from 'react-router-dom';
 
 const App = () => {
+  const [appDataForm, setAppDataForm] = useState(null);
+  
   const handleFormOK = (datazform) => {
     setAppDataForm(datazform);
   };
 
-  const [appDataForm, setAppDataForm] = useState(null);
 
   return (
     <>
