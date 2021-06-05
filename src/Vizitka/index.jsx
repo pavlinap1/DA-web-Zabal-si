@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import seznam from '../seznam';
 
 const Mena = ({ select }) => {
   const [from, setFrom] = useState('');
@@ -52,6 +53,9 @@ const KurzovniListek = () => {
 };
 
 const Vizitka = ({ dataToVizitka }) => {
+  const zobrazSeznam = () => {
+    console.log(seznam[0].name);
+  };
   return (
     <>
       <div className="vizitka">
@@ -61,7 +65,9 @@ const Vizitka = ({ dataToVizitka }) => {
           {dataToVizitka.pocetZavazadel} a jedeš {dataToVizitka.kamJedu}.
         </p>
         <KurzovniListek />
-        <img src="assets/kufr.png" />
+        <div onClick={zobrazSeznam}>
+          <img src="assets/kufr.png" />
+        </div>
       </div>
     </>
   );
