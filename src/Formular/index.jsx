@@ -40,7 +40,7 @@ const Formular = ({ onFormOK }) => {
       `Uživatel jede do ${zeme} do ${mesto}, má ${pocetZavazadel} zavazadel a jede ${kamJedu}. Odjíždí ${odjezd} a přijíždí ${prijezd}`,
     );
 
-    onFormOK('blablabla');
+    onFormOK('blablablddda');
     history.push('/vizitka');
   };
   const handleResetClick = () => {
