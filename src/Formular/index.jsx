@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './style.css';
 import { useHistory } from 'react-router-dom';
+import { seznam } from '../seznam';
 
 const VyberZeme = ({ zeme }) => {
   return (
@@ -123,10 +124,10 @@ const Formular = ({ onFormOK }) => {
           Kam jedu:
           <select onChange={(e) => setKamJedu(e.target.value)} value={kamJedu}>
             <option value="">Vyberte účel cesty</option>
-            <option value="K moři">K moři</option>
-            <option value="Na hory">Na hory</option>
-            <option value="Na služební cesty">Na služební cestu</option>
-            <option value="Na čundr">Na čundr</option>
+
+            {seznam.map((polozka) => (
+              <option key={polozka.name}> {polozka.name}</option>
+            ))}
           </select>
         </label>
         <div className="tlacitka">

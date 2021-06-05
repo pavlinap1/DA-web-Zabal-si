@@ -54,14 +54,14 @@ export const seznam = [
     ostatni: [],
   },
   {
-    name: 'Čundr',
+    name: 'Služební cesta',
     cestovniDoklady: [],
     obleceni: [],
     hygiena: [],
     ostatni: [],
   },
   {
-    name: 'Čundr',
+    name: 'Na hory',
     cestovniDoklady: [],
     obleceni: [],
     hygiena: [],
