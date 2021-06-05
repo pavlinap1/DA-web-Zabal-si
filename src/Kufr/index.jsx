@@ -16,7 +16,11 @@ const Sekce = ({ jmeno, data }) => (
 
 const Polozka = ({ typPolozka }) => (
   <>
+    <Sekce jmeno={'Cestovní doklady'} data={typPolozka.cestovniDoklady} />
     <Sekce jmeno={'Oblečení'} data={typPolozka.obleceni} />
+    <Sekce jmeno={'Hygiena'} data={typPolozka.hygiena} />
+    <Sekce jmeno={'Elektronika'} data={typPolozka.elektronika} />
+    <Sekce jmeno={'Ostatní'} data={typPolozka.ostatni} />
   </>
 );
 
