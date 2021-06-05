@@ -58,6 +58,7 @@ const KurzovniListek = () => {
 const Vizitka = ({ dataToVizitka }) => {
   const typSeznam = seznam.find((i) => dataToVizitka.kamJedu === i.name);
 
+
   return (
     <>
       <div className="vizitka">
@@ -68,7 +69,9 @@ const Vizitka = ({ dataToVizitka }) => {
         </p>
         <KurzovniListek />
 
-        <Kufr typPolozka={typSeznam} />
+        <Kufr
+          typPolozka={typSeznam}
+        />
       </div>
     </>
   );

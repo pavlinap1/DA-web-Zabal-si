@@ -1,0 +1,7 @@
+.seznam {
+  display: block;
+}
+
+.seznam--closed {
+  display: none;
+}

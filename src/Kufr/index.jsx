@@ -3,18 +3,22 @@ import './style.css';
 
 const Sekce = () => {};
 
-const Polozka = ({ typPolozka }) => <>blablabla</>;
+const Polozka = ({ typPolozka }) => {
+  return <>blablabla</>;
+};
 
 const Kufr = ({ typPolozka }) => {
-  const zobrazSeznam = () => {
-    console.log(typPolozka);
+  const [openSeznam, setOpenSeznam] = useState(false);
+  const handleOpenSeznnam = () => {
+    setOpenSeznam(!openSeznam);
   };
+
   return (
     <>
-      <div className="obrazekkufr" onClick={zobrazSeznam}>
+      <div className="obrazekkufr" onClick={handleOpenSeznnam}>
         <img src="assets/kufr.png" />
       </div>
-      <Polozka typPolozka={typPolozka} />
+      {openSeznam && <Polozka typPolozka={typPolozka} />}
     </>
   );
 };
