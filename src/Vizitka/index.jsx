@@ -54,8 +54,9 @@ const KurzovniListek = () => {
 };
 
 const Vizitka = ({ dataToVizitka }) => {
+  const typSeznam = seznam.find((i) => dataToVizitka.kamJedu === i.name);
   const zobrazSeznam = () => {
-    console.log(seznam[0].cestovniDoklady);
+    console.log(typSeznam);
   };
   return (
     <>

@@ -10,7 +10,7 @@ import Formular from './Formular';
 const App = () => {
   //const [appDataForm, setAppDataForm] = useState('null');
   const [appDataForm, setAppDataForm] = useState({
-    kamJedu: 'Na čundr',
+    kamJedu: 'K moři',
     mesto: 'praha',
     odjezd: '2021-06-09',
     pocetZavazadel: '2',
