@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 import { seznam } from '../seznam';
 import './style.css';
 
-const Sekce = ({ jmeno, data, onPolozkaPridana }) => {
+const Sekce = ({ jmeno, data, onSekceZmena }) => {
   const [novaPolozka, setNovaPolozka] = useState('');
   const handleClickPolozka = () => {
     const novySeznamPolozek = [novaPolozka].concat(data);
-    onPolozkaPridana(novySeznamPolozek);
+    onSekceZmena(novySeznamPolozek);
   };
-  const handleOdebratPolozku = () => {};
+  const handleOdebratPolozku = (polozka) => {
+    const polozkyPoOdebrani = data.filter((i) => i !== polozka);
+    onSekceZmena(polozkyPoOdebrani);
+  };
 
   return (
     <>
@@ -17,8 +20,15 @@ const Sekce = ({ jmeno, data, onPolozkaPridana }) => {
         <ul>
           {data.map((polozka, index) => (
             <li key={'il' + index}>
+              {' '}
               {polozka}
-              <button onClick={handleOdebratPolozku}>Odebrat položku</button>
+              <button
+                onClick={() => {
+                  handleOdebratPolozku(polozka);
+                }}
+              >
+                Odebrat položku
+              </button>
             </li>
           ))}
           <input
@@ -33,7 +43,7 @@ const Sekce = ({ jmeno, data, onPolozkaPridana }) => {
 };
 
 const Polozka = ({ typPolozka, onZmenaSeznamu }) => {
-  const handlePridanaPolozka = (nazev, data) => {
+  const handleSekceZmena = (nazev, data) => {
     onZmenaSeznamu(nazev, data);
   };
   return (
@@ -41,27 +51,27 @@ const Polozka = ({ typPolozka, onZmenaSeznamu }) => {
       <Sekce
         jmeno={'Cestovní doklady'}
         data={typPolozka.cestovniDoklady}
-        onPolozkaPridana={(d) => handlePridanaPolozka('cestovniDoklady', d)}
+        onSekceZmena={(d) => handleSekceZmena('cestovniDoklady', d)}
       />
       <Sekce
         jmeno={'Oblečení'}
         data={typPolozka.obleceni}
-        onPolozkaPridana={(d) => handlePridanaPolozka('obleceni', d)}
+        onSekceZmena={(d) => handleSekceZmena('obleceni', d)}
       />
       <Sekce
         jmeno={'Hygiena'}
         data={typPolozka.hygiena}
-        onPolozkaPridana={(d) => handlePridanaPolozka('hygiena', d)}
+        onSekceZmena={(d) => handleSekceZmena('hygiena', d)}
       />
       <Sekce
         jmeno={'Elektronika'}
         data={typPolozka.elektronika}
-        onPolozkaPridana={(d) => handlePridanaPolozka('elektronika', d)}
+        onSekceZmena={(d) => handleSekceZmena('elektronika', d)}
       />
       <Sekce
         jmeno={'Ostatní'}
         data={typPolozka.ostatni}
-        onPolozkaPridana={(d) => handlePridanaPolozka('ostatni', d)}
+        onSekceZmena={(d) => handleSekceZmena('ostatni', d)}
       />
     </>
   );
