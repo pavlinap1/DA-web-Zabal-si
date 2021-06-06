@@ -65,7 +65,6 @@ const Vizitka = ({ dataToVizitka, onTiskOK }) => {
 
   const handleKufrChange = (dataZKufru) => {
     dataKufrSeznam = dataKufrSeznam.filter((i) => dataZKufru.id !== i.id);
-
     dataKufrSeznam.push(dataZKufru);
     console.log(dataKufrSeznam);
   };
