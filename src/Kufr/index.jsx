@@ -84,7 +84,7 @@ const Kufr = ({ typPolozka, index, onKufrChange }) => {
     setStateSeznam(newSeznam);
 
     const dataZKufru = {
-      index: index,
+      id: index,
       cestovniDoklady: newSeznam.cestovniDoklady,
       obleceni: newSeznam.obleceni,
       hygiena: newSeznam.hygiena,
