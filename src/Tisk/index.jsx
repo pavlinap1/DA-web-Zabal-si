@@ -1,11 +1,15 @@
 import React from 'react';
+import './style.css';
 const TiskSekce = ({ obsah, jmeno }) => {
   return (
     <>
       <h4>{jmeno}</h4>
       <ul>
         {obsah.map((polozka, index) => (
-          <li key={'il' + index}>{polozka}</li>
+          <li key={'il' + index}>
+            {polozka}
+            <div className="checkbox"></div>
+          </li>
         ))}
       </ul>
     </>
@@ -34,7 +38,7 @@ const Tisk = ({ dataToTisk: { dataToVizitka, dataKufrSeznam } }) => {
       </p>
 
       {dataKufrSeznam
-        .sort((a, b) => b - a)
+        .sort((a, b) => a.id - b.id)
         .map((i, index) => (
           <ObsahKufru key={'il' + index} obsah={i} />
         ))}
