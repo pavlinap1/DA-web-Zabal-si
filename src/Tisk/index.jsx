@@ -33,9 +33,11 @@ const Tisk = ({ dataToTisk: { dataToVizitka, dataKufrSeznam } }) => {
         {dataToVizitka.pocetZavazadel} a jedeš {dataToVizitka.kamJedu}.
       </p>
 
-      {dataKufrSeznam.map((i, index) => (
-        <ObsahKufru key={'il' + index} obsah={i} />
-      ))}
+      {dataKufrSeznam
+        .sort((a, b) => b - a)
+        .map((i, index) => (
+          <ObsahKufru key={'il' + index} obsah={i} />
+        ))}
     </>
   );
 };
