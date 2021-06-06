@@ -134,7 +134,17 @@ const Formular = ({ onFormOK }) => {
           <button onClick={handleResetClick} className="tlacitko1">
             Zrušit
           </button>
-          <button className="tlacitko2" type="submit">
+          <button
+            className="tlacitko2"
+            type="submit"
+            disabled={
+              zeme === '' ||
+              pocetZavazadel === 0 ||
+              kamJedu === '' ||
+              odjezd === '' ||
+              prijezd === ''
+            }
+          >
             OK
           </button>
         </div>

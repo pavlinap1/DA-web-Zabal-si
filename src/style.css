@@ -38,6 +38,7 @@ img {
   margin-bottom: 30px;
   padding: 20px;
   border-radius: 20px;
+  text-align: center;
 }
 
 button {
@@ -46,6 +47,8 @@ button {
   min-width: 100px;
   border: 1px solid gray;
   height: 40px;
+  width: 130px;
+  border-radius: 20px;
 }
 
 button:hover {

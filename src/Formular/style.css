@@ -2,6 +2,7 @@ form {
   background-color: lightblue;
   width: 400px;
   padding: 10px;
+  margin: 20px auto;
 }
 
 label {
@@ -9,6 +10,7 @@ label {
   display: flex;
   padding: 10px;
   border-bottom: 1px solid gray;
+  text-align: left;
 }
 
 form button,
@@ -37,4 +39,3 @@ form {
 .form--closed {
   display: none;
 }
-
