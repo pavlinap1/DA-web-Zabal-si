@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 
 const Tisk = ({ dataToTisk: { dataToVizitka, dataKufrSeznam } }) => {
+  const ObsakKufru = () => {
+
+  }
   return (
     <>
       <p>
@@ -13,6 +16,7 @@ const Tisk = ({ dataToTisk: { dataToVizitka, dataKufrSeznam } }) => {
           <li key={'il' + index}> {polozka}</li>
         ))}
       </ul>
+      <ObsakKufru />
     </>
   );
 };

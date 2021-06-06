@@ -3,7 +3,6 @@ import { seznam } from '../seznam';
 import Kufr from '../Kufr';
 import './style.css';
 import { useHistory } from 'react-router-dom';
-
 const Mena = ({ select }) => {
   const [from, setFrom] = useState('');
   useEffect(() => {
@@ -74,18 +73,6 @@ const Vizitka = ({ dataToVizitka, onTiskOK }) => {
   const kufrSeznam = [];
   for (let i = 0; i < dataToVizitka.pocetZavazadel; i += 1) {
     const copySeznam = { ...typSeznam };
-
-    const dataZKufru = {
-      id: i,
-      cestovniDoklady: copySeznam.cestovniDoklady,
-      obleceni: copySeznam.obleceni,
-      hygiena: copySeznam.hygiena,
-      elektronika: copySeznam.elektronika,
-      ostatni: copySeznam.ostatni,
-    };
-
-    dataKufrSeznam.push(dataZKufru);
-
     kufrSeznam.push(
       <Kufr
         key={'kuf' + i}
