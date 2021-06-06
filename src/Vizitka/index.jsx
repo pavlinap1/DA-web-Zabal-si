@@ -63,6 +63,12 @@ const Vizitka = ({ dataToVizitka, onTiskOK }) => {
     history.push('/tisk');
   };
 
+  const handleKufrChange = (datazkufru) => {
+    dataKufrSeznam.push(datazkufru);
+    console.log(dataKufrSeznam);
+  };
+  let dataKufrSeznam = [];
+
   const kufrSeznam = [];
   for (let i = 0; i < dataToVizitka.pocetZavazadel; i += 1) {
     const copySeznam = { ...typSeznam };
@@ -75,11 +81,6 @@ const Vizitka = ({ dataToVizitka, onTiskOK }) => {
       />,
     );
   }
-
-  const handleKufrChange = (datazkkufru) => {
-    dataKufrSeznam.push(datazkkufru);
-  };
-  let dataKufrSeznam = [];
 
   return (
     <>

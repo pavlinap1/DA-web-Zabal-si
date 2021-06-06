@@ -7,7 +7,63 @@ import Tisk from './Tisk';
 import Vizitka from './Vizitka';
 import Formular from './Formular';
 
-const tmpTisk = { "dataToVizitka": { "kamJedu": "K moři", "mesto": "praha", "odjezd": "2021-06-09", "pocetZavazadel": "2", "prijezd": "2021-06-19", "zeme": "Slovensko" }, "typSeznam": { "name": "K moři", "cestovniDoklady": ["OP", "Cestovní pas", "Kartička zdravotního pojištění", "Cestovní pojištění", "Řidičák (zelená karta)", "Platební karty", "Voucher", "Letenka", "Vízum", "Lékařské potvrzení"], "obleceni": ["Plavky", "Spodní prádlo", "Ponožky", "Obuv (i do vody)", "Kraťasy", "Tričko", "Tílko", "Klobouk/Kšiltovka", "Šaty?", "Pyžamo"], "hygiena": ["Zubní kartáček", "Pasta", "Hřeben", "Sprchový gel", "šampon", "Deodorant", "Papírové kapesníky", "Holicí potřeby"], "elektronika": ["Mobilní telefon", "Nabíječka", "Powerbanka", "Sluchátka"], "ostatni": ["Léky", "Sluneční brýle", "Potápěčské vybavení", "Opalovací krém", "Slunečník", "Deky/karimatky", "Nafukovací lehátko"] } }
+const tmpTisk = {
+  dataToVizitka: {
+    kamJedu: 'K moři',
+    mesto: 'praha',
+    odjezd: '2021-06-09',
+    pocetZavazadel: '2',
+    prijezd: '2021-06-19',
+    zeme: 'Slovensko',
+  },
+  typSeznam: {
+    name: 'K moři',
+    cestovniDoklady: [
+      'OP',
+      'Cestovní pas',
+      'Kartička zdravotního pojištění',
+      'Cestovní pojištění',
+      'Řidičák (zelená karta)',
+      'Platební karty',
+      'Voucher',
+      'Letenka',
+      'Vízum',
+      'Lékařské potvrzení',
+    ],
+    obleceni: [
+      'Plavky',
+      'Spodní prádlo',
+      'Ponožky',
+      'Obuv (i do vody)',
+      'Kraťasy',
+      'Tričko',
+      'Tílko',
+      'Klobouk/Kšiltovka',
+      'Šaty?',
+      'Pyžamo',
+    ],
+    hygiena: [
+      'Zubní kartáček',
+      'Pasta',
+      'Hřeben',
+      'Sprchový gel',
+      'šampon',
+      'Deodorant',
+      'Papírové kapesníky',
+      'Holicí potřeby',
+    ],
+    elektronika: ['Mobilní telefon', 'Nabíječka', 'Powerbanka', 'Sluchátka'],
+    ostatni: [
+      'Léky',
+      'Sluneční brýle',
+      'Potápěčské vybavení',
+      'Opalovací krém',
+      'Slunečník',
+      'Deky/karimatky',
+      'Nafukovací lehátko',
+    ],
+  },
+};
 
 const App = () => {
   //const [appDataForm, setAppDataForm] = useState('null');
@@ -27,11 +83,10 @@ const App = () => {
   };
   const handleVizitka = (datazvizitka) => {
     setDataFromVizitka(datazvizitka);
-
   };
   return (
     <>
-      <div className="container">
+      <div className="container hlavniStranka">
         <Router>
           <Header />
           <Switch>
