@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-const Tisk = ({ dataToTisk: { dataToVizitka, typSeznam } }) => {
+
+const Tisk = ({ dataToTisk: { dataToVizitka, dataKufrSeznam } }) => {
   return (
     <>
       <p>

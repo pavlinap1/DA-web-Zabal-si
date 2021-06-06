@@ -3,6 +3,7 @@ import { seznam } from '../seznam';
 import Kufr from '../Kufr';
 import './style.css';
 import { useHistory } from 'react-router-dom';
+
 const Mena = ({ select }) => {
   const [from, setFrom] = useState('');
   useEffect(() => {
@@ -58,7 +59,7 @@ const Vizitka = ({ dataToVizitka, onTiskOK }) => {
   let history = useHistory();
   const typSeznam = seznam.find((i) => dataToVizitka.kamJedu === i.name);
   const handleClickTisk = () => {
-    const dataFromVizitka = { dataToVizitka, typSeznam };
+    const dataFromVizitka = { dataToVizitka, dataKufrSeznam };
     onTiskOK(dataFromVizitka);
     history.push('/tisk');
   };
