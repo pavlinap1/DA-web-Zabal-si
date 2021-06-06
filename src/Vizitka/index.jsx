@@ -75,7 +75,7 @@ const Vizitka = ({ dataToVizitka, onTiskOK }) => {
     const copySeznam = { ...typSeznam };
 
     const dataZKufru = {
-      id: i,
+      id: i + 1,
       cestovniDoklady: copySeznam.cestovniDoklady,
       obleceni: copySeznam.obleceni,
       hygiena: copySeznam.hygiena,
