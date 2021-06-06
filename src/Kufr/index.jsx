@@ -62,7 +62,7 @@ const Polozka = ({ typPolozka, onZmenaSeznamu }) => {
     </>
   );
 };
-const Kufr = ({ typPolozka, index }) => {
+const Kufr = ({ typPolozka, index, onKufrChange }) => {
   const [stateSeznam, setStateSeznam] = useState(typPolozka);
   const [openSeznam, setOpenSeznam] = useState(false);
   const handleZmenaSeznamu = (name, data) => {
@@ -82,6 +82,7 @@ const Kufr = ({ typPolozka, index }) => {
       console.log('Nenalezeno ' + name);
     }
     setStateSeznam(newSeznam);
+    onKufrChange(newSeznam);
   };
   const handleOpenSeznnam = () => {
     setOpenSeznam(!openSeznam);

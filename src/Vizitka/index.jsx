@@ -67,9 +67,20 @@ const Vizitka = ({ dataToVizitka, onTiskOK }) => {
   for (let i = 0; i < dataToVizitka.pocetZavazadel; i += 1) {
     const copySeznam = { ...typSeznam };
     kufrSeznam.push(
-      <Kufr key={'kuf' + i} index={i + 1} typPolozka={copySeznam} />,
+      <Kufr
+        key={'kuf' + i}
+        index={i + 1}
+        typPolozka={copySeznam}
+        onKufrChange={handleKufrChange}
+      />,
     );
   }
+
+  const handleKufrChange = (datazkkufru) => {
+    dataKufrSeznam.push(datazkkufru);
+  };
+  let dataKufrSeznam = [];
+
   return (
     <>
       <div className="vizitka">
