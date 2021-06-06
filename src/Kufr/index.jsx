@@ -18,7 +18,7 @@ const Sekce = ({ jmeno, data, onPolozkaPridana }) => {
           {data.map((polozka, index) => (
             <li key={'il' + index}>
               {polozka}
-              <button>onClick={handleOdebratPolozku}>Odebrat položku</button>
+              <button onClick={handleOdebratPolozku}>Odebrat položku</button>
             </li>
           ))}
           <input
