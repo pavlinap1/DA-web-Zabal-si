@@ -8,6 +8,7 @@ const Sekce = ({ jmeno, data, onPolozkaPridana }) => {
     const novySeznamPolozek = [novaPolozka].concat(data);
     onPolozkaPridana(novySeznamPolozek);
   };
+  const handleOdebratPolozku = () => {};
 
   return (
     <>
@@ -15,7 +16,10 @@ const Sekce = ({ jmeno, data, onPolozkaPridana }) => {
         <h2 className="nazevSekce">{jmeno}</h2>
         <ul>
           {data.map((polozka, index) => (
-            <li key={'il' + index}> {polozka}</li>
+            <li key={'il' + index}>
+              {polozka}
+              <button>onClick={handleOdebratPolozku}>Odebrat položku</button>
+            </li>
           ))}
           <input
             onChange={(e) => setNovaPolozka(e.target.value)}
