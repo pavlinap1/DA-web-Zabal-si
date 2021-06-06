@@ -14,7 +14,7 @@ const TiskSekce = ({ obsah, jmeno }) => {
 const ObsahKufru = ({ obsah }) => {
   return (
     <>
-      <h2>Kufr {obsah.id + 1}</h2>
+      <h2>Kufr {obsah.id}</h2>
       <TiskSekce obsah={obsah.cestovniDoklady} jmeno="Cestovní doklady" />
       <TiskSekce obsah={obsah.obleceni} jmeno="Oblečení" />
       <TiskSekce obsah={obsah.hygiena} jmeno="Hygiena" />
