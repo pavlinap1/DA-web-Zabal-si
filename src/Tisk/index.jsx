@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 
 const Tisk = ({ dataToTisk: { dataToVizitka, dataKufrSeznam } }) => {
-  const ObsakKufru = () => {
-
-  }
+  const ObsakKufru = () => {};
   return (
     <>
       <p>
