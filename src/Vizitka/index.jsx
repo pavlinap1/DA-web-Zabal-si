@@ -63,11 +63,11 @@ const Vizitka = ({ dataToVizitka, onTiskOK }) => {
     history.push('/tisk');
   };
 
-  const handleKufrChange = (datazkufru) => {
-    const filter = dataKufrSeznam.filter((i) => dataZKufru.id === i.id);
-    console.log(filter);
-    dataKufrSeznam.push(datazkufru);
-    //console.log(dataKufrSeznam);
+  const handleKufrChange = (dataZKufru) => {
+    dataKufrSeznam = dataKufrSeznam.filter((i) => dataZKufru.id !== i.id);
+
+    dataKufrSeznam.push(dataZKufru);
+    console.log(dataKufrSeznam);
   };
   let dataKufrSeznam = [];
 
