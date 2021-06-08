@@ -91,16 +91,13 @@ const Formular = ({ onFormOK }) => {
           ></input>
         </label>
         <label>
-          Typ dopravy:
-          <select
-            value={typDopravy}
-            onChange={(e) => setTypDopravy(e.target.value)}
-          >
-            <option value="">Vyberte typ dopravy</option>
-            <option value="Letadlo">letadlo</option>
-            <option value="Automobil">automobil</option>
-            <option value="Vlak">vlak</option>
-            <option value="Autobus">autobus</option>
+          Účel cesty:
+          <select onChange={(e) => setKamJedu(e.target.value)} value={kamJedu}>
+            <option value="">Vyberte účel cesty</option>
+
+            {seznam.map((polozka) => (
+              <option key={polozka.name}> {polozka.name}</option>
+            ))}
           </select>
         </label>
         <label>
@@ -123,7 +120,6 @@ const Formular = ({ onFormOK }) => {
             onChange={(e) => setPrijezd(e.target.value)}
           ></input>
         </label>
-
         <label>
           Počet zavazadel:
           <select
@@ -134,16 +130,6 @@ const Formular = ({ onFormOK }) => {
             <option value={1}>1</option>
             <option value={2}>2</option>
             <option value={3}>3</option>
-          </select>
-        </label>
-        <label>
-          Kam jedu:
-          <select onChange={(e) => setKamJedu(e.target.value)} value={kamJedu}>
-            <option value="">Vyberte účel cesty</option>
-
-            {seznam.map((polozka) => (
-              <option key={polozka.name}> {polozka.name}</option>
-            ))}
           </select>
         </label>
         <div className="tlacitka">

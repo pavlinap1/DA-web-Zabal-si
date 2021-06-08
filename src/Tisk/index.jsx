@@ -31,14 +31,11 @@ const ObsahKufru = ({ obsah }) => {
 const Tisk = ({ dataToTisk: { dataToVizitka, dataKufrSeznam } }) => {
   return (
     <>
-      <p>
-        Cílová země je {dataToVizitka.zeme} ({dataToVizitka.mesto}) a jedu
-        {dataToVizitka.kamJedu}
-      </p>
-      <p>Dopravní prostředek je {dataToVizitka.typDopravy}</p>
-      <p>
-        Od {dataToVizitka.odjezd} do {dataToVizitka.prijezd}
-      </p>
+      <p> Cílová země: {dataToVizitka.zeme} </p>
+      <p> Město: {dataToVizitka.mesto}</p>
+      <p> Účel cesty: {dataToVizitka.kamJedu} </p>
+      <p> Odjezd: {dataToVizitka.prijezd}</p>
+      <p> Příjezd: {dataToVizitka.odjezd}</p>
       <p> Počet zavazadel {dataToVizitka.pocetZavazadel} </p>
 
       {dataKufrSeznam
