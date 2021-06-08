@@ -102,6 +102,7 @@ const Vizitka = ({ dataToVizitka, onTiskOK }) => {
           Cílová země je {dataToVizitka.zeme} ({dataToVizitka.mesto}) a jedu
           {dataToVizitka.kamJedu}
         </p>
+        <p>Dopravní prostředek je {dataToVizitka.typDopravy}</p>
         <p>
           Od {dataToVizitka.odjezd} do {dataToVizitka.prijezd}
         </p>

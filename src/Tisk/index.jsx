@@ -32,10 +32,14 @@ const Tisk = ({ dataToTisk: { dataToVizitka, dataKufrSeznam } }) => {
   return (
     <>
       <p>
-        Jedeš do {dataToVizitka.zeme} {dataToVizitka.mesto} od{' '}
-        {dataToVizitka.odjezd} do {dataToVizitka.prijezd}, zavazadel máš{' '}
-        {dataToVizitka.pocetZavazadel} a jedeš {dataToVizitka.kamJedu}.
+        Cílová země je {dataToVizitka.zeme} ({dataToVizitka.mesto}) a jedu
+        {dataToVizitka.kamJedu}
       </p>
+      <p>Dopravní prostředek je {dataToVizitka.typDopravy}</p>
+      <p>
+        Od {dataToVizitka.odjezd} do {dataToVizitka.prijezd}
+      </p>
+      <p> Počet zavazadel {dataToVizitka.pocetZavazadel} </p>
 
       {dataKufrSeznam
         .sort((a, b) => a.id - b.id)
