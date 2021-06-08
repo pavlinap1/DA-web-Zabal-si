@@ -7,6 +7,7 @@ const Sekce = ({ jmeno, data, onSekceZmena }) => {
   const handleClickPolozka = () => {
     const novySeznamPolozek = [novaPolozka].concat(data);
     onSekceZmena(novySeznamPolozek);
+    setNovaPolozka('');
   };
   const handleOdebratPolozku = (polozka) => {
     const polozkyPoOdebrani = data.filter((i) => i !== polozka);
@@ -32,6 +33,7 @@ const Sekce = ({ jmeno, data, onSekceZmena }) => {
             </li>
           ))}
           <input
+            value={novaPolozka}
             onChange={(e) => setNovaPolozka(e.target.value)}
             type="text"
           ></input>

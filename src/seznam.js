@@ -1,6 +1,6 @@
 export const seznam = [
   {
-    name: 'K moři',
+    name: 'k moři',
     cestovniDoklady: [
       'OP',
       'Cestovní pas',
@@ -47,7 +47,7 @@ export const seznam = [
     ],
   },
   {
-    name: 'Čundr',
+    name: 'na čundr',
     cestovniDoklady: [
       'Občanský průkaz',
       'Cestovní pas',
@@ -97,7 +97,7 @@ export const seznam = [
     ],
   },
   {
-    name: 'Služební cesta',
+    name: 'na služební cestu',
     cestovniDoklady: [
       'OP',
       'pas',
@@ -147,7 +147,7 @@ export const seznam = [
     ostatni: ['pracovní ID karta', 'informace o ubytování - pin do hotelu'],
   },
   {
-    name: 'Na hory',
+    name: 'na hory',
     cestovniDoklady: [
       'OP',
       'pas',
