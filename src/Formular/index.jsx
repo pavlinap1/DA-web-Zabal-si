@@ -58,7 +58,7 @@ const Formular = ({ onFormOK }) => {
   return (
     <>
       <div className="body">
-        <div className="body">
+        <div>
           <p>
             Vítáme Vás na stránce Zabal si, která slouží k plánování dovolené či
             jiné cesty.
@@ -130,11 +130,7 @@ const Formular = ({ onFormOK }) => {
           </select>
         </label>
         <div className="tlacitka">
-          <button
-            onClick={handleResetClick}
-            className="tlacitkoReset"
-            type="reset"
-          >
+          <button onClick={handleResetClick} className="tlacitko1" type="reset">
             Zrušit
           </button>
           <button
@@ -142,6 +138,7 @@ const Formular = ({ onFormOK }) => {
             type="submit"
             disabled={
               zeme === '' ||
+              mesto === null ||
               pocetZavazadel === 0 ||
               kamJedu === '' ||
               odjezd === '' ||
