@@ -25,7 +25,6 @@ const Formular = ({ onFormOK }) => {
   let history = useHistory();
   const [zeme, setZeme] = useState('');
   const [mesto, setMesto] = useState('');
-  const [typDopravy, setTypDopravy] = useState('');
   const [prijezd, setPrijezd] = useState('');
   const [odjezd, setOdjezd] = useState('');
   const [pocetZavazadel, setPocetZavazadel] = useState(0);
@@ -39,7 +38,6 @@ const Formular = ({ onFormOK }) => {
     const dataFromFrom = {
       zeme,
       mesto,
-      typDopravy,
       pocetZavazadel,
       kamJedu,
       odjezd,
@@ -52,7 +50,6 @@ const Formular = ({ onFormOK }) => {
   const handleResetClick = () => {
     setZeme('');
     setMesto('');
-    setTypDopravy('');
     setPrijezd('');
     setOdjezd('');
     setPocetZavazadel('');
