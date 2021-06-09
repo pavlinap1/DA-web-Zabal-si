@@ -130,11 +130,15 @@ const Formular = ({ onFormOK }) => {
           </select>
         </label>
         <div className="tlacitka">
-          <button onClick={handleResetClick} className="tlacitko1">
+          <button
+            onClick={handleResetClick}
+            className="tlacitkoReset"
+            type="reset"
+          >
             Zrušit
           </button>
           <button
-            className="tlacitko2"
+            className="tlacitkoOk"
             type="submit"
             disabled={
               zeme === '' ||

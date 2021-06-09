@@ -1,33 +1,14 @@
-html {
+* {
   box-sizing: border-box;
 }
-*,
-::before,
-::after {
-  box-sizing: inherit;
+
+html {
+  font-family: 'Baloo Tammudu 2', cursive;
+  background-color: white;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(245, 236, 222);
   margin: 0;
-}
-
-.hlavicka {
-  max-width: 600px;
-}
-
-img {
-  width: 100%;
-}
-
-#app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 .container {
@@ -35,13 +16,38 @@ img {
   margin-right: auto;
   margin-left: auto;
   background-color: white;
-  margin-bottom: 30px;
-  padding: 20px;
-  border-radius: 20px;
 }
 
-.hlavniStranka {
-  text-align: center;
+header,
+footer {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* ---------- konec globálních stylů ---------- */
+
+header {
+  padding-top: 1px;
+  height: 400px;
+  background-color: white;
+  background-image: url(./assets/mapa.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  margin: -4rem auto 4rem auto;
+  padding: 2rem;
+
+  color: black;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 5px gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 button {
@@ -53,11 +59,9 @@ button {
   width: 130px;
   border-radius: 20px;
 }
-
 button:hover {
   background-color: rgb(112, 194, 194);
 }
-
 button:disabled {
   background-color: lightgray;
   cursor: initial;
