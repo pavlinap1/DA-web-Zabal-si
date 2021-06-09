@@ -3,6 +3,7 @@ import { seznam } from '../seznam';
 import Kufr from '../Kufr';
 import './style.css';
 import { useHistory } from 'react-router-dom';
+import { format } from 'date-fns';
 
 const Vizitka = ({ dataToVizitka, onTiskOK }) => {
   let history = useHistory();
@@ -44,15 +45,16 @@ const Vizitka = ({ dataToVizitka, onTiskOK }) => {
       />,
     );
   }
-
+  const datumOdjezd = dataToVizitka.odjezd;
+  const datumPrijezd = dataToVizitka.prijezd;
   return (
     <>
       <div className="vizitka">
         <p> Cílová země: {dataToVizitka.zeme} </p>
         <p> Město: {dataToVizitka.mesto}</p>
         <p> Účel cesty: {dataToVizitka.kamJedu} </p>
-        <p> Příjezd: {dataToVizitka.odjezd}</p>
-        <p> Odjezd: {dataToVizitka.prijezd}</p>
+        <p> Odjezd: {format(new Date(datumOdjezd), 'dd. MM. yyyy')}</p>
+        <p> Příjezd: {format(new Date(datumPrijezd), 'dd. MM. yyyy')}</p>
         <p> Počet zavazadel {dataToVizitka.pocetZavazadel} </p>
 
         {kufrSeznam}

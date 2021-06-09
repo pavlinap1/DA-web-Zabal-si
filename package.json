@@ -23,6 +23,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "date-fns": "^2.22.1",
     "firebase": "^8.6.3",
     "react": "^17.0.2",
     "react-calendar": "^3.4.0",

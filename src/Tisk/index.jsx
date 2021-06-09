@@ -1,5 +1,7 @@
 import React from 'react';
 import './style.css';
+import { format } from 'date-fns';
+
 const TiskSekce = ({ obsah, jmeno }) => {
   return (
     <>
@@ -29,13 +31,15 @@ const ObsahKufru = ({ obsah }) => {
 };
 //Místo kufru je lepší to pojmenovat zavazadlo
 const Tisk = ({ dataToTisk: { dataToVizitka, dataKufrSeznam } }) => {
+  const datumOdjezd = dataToVizitka.odjezd;
+  const datumPrijezd = dataToVizitka.prijezd;
   return (
     <>
       <p> Cílová země: {dataToVizitka.zeme} </p>
       <p> Město: {dataToVizitka.mesto}</p>
       <p> Účel cesty: {dataToVizitka.kamJedu} </p>
-      <p> Odjezd: {dataToVizitka.prijezd}</p>
-      <p> Příjezd: {dataToVizitka.odjezd}</p>
+      <p> Odjezd: {format(new Date(datumOdjezd), 'dd. MM. yyyy')}</p>
+      <p> Příjezd: {format(new Date(datumPrijezd), 'dd. MM. yyyy')}</p>
       <p> Počet zavazadel {dataToVizitka.pocetZavazadel} </p>
 
       {dataKufrSeznam
