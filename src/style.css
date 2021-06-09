@@ -3,14 +3,26 @@
 }
 
 html {
-  font-family: 'Baloo Tammudu 2', cursive;
+  font-family: 'Open Sans', sans-serif;
   background-color: white;
 }
 
 body {
   margin: 0;
+  background-image: url(./assets/mapa.jpg);
+  background-size: 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 
+img {
+  width: 100%;
+}
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 .container {
   width: 720px;
   margin-right: auto;
@@ -25,19 +37,15 @@ footer {
 }
 
 /* ---------- konec globálních stylů ---------- */
-
+/*
 header {
   padding-top: 1px;
   height: 400px;
   background-color: white;
-  background-image: url(./assets/mapa.jpg);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
 }
-
+*/
 .container {
-  margin: -4rem auto 4rem auto;
+  margin: 12rem auto 4rem auto;
   padding: 2rem;
 
   color: black;
