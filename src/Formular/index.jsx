@@ -65,7 +65,7 @@ const Formular = ({ onFormOK }) => {
           </p>
           <p>Na začátku si můžete vyplnit formulář o vaší cestě.</p>
         </div>
-        <button onClick={handleClick}>Vyplnit formulář</button>
+        <button onClick={handleClick}>Vyplň si</button>
       </div>
       <form
         className={openForm ? 'form' : 'form--closed'}
@@ -130,11 +130,10 @@ const Formular = ({ onFormOK }) => {
           </select>
         </label>
         <div className="tlacitka">
-          <button onClick={handleResetClick} className="tlacitko1" type="reset">
+          <button onClick={handleResetClick} type="reset">
             Zrušit
           </button>
           <button
-            className="tlacitkoOk"
             type="submit"
             disabled={
               zeme === '' ||

@@ -56,9 +56,10 @@ const Vizitka = ({ dataToVizitka, onTiskOK }) => {
         <p> Odjezd: {format(new Date(datumOdjezd), 'dd. MM. yyyy')}</p>
         <p> Příjezd: {format(new Date(datumPrijezd), 'dd. MM. yyyy')}</p>
         <p> Počet zavazadel {dataToVizitka.pocetZavazadel} </p>
-
         {kufrSeznam}
-        <button onClick={handleClickTisk}>Mám nachystáno, chci tisknout</button>
+        <button className="btn-tisk" onClick={handleClickTisk}>
+          Tisk
+        </button>
       </div>
     </>
   );

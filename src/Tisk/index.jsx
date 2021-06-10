@@ -6,14 +6,16 @@ const TiskSekce = ({ obsah, jmeno }) => {
   return (
     <>
       <h4>{jmeno}</h4>
-      <ul>
-        {obsah.map((polozka, index) => (
-          <li key={'il' + index}>
-            {polozka}
-            <div className="checkbox"></div>
-          </li>
-        ))}
-      </ul>
+      <div className="seznam">
+        <ul className="zmena-seznamu">
+          {obsah.map((polozka, index) => (
+            <li className="polozky" key={'il' + index}>
+              <div className="checkbox"></div>
+              {polozka}
+            </li>
+          ))}
+        </ul>
+      </div>
     </>
   );
 };
@@ -35,13 +37,17 @@ const Tisk = ({ dataToTisk: { dataToVizitka, dataKufrSeznam } }) => {
   const datumPrijezd = dataToVizitka.prijezd;
   return (
     <>
-      <p> Cílová země: {dataToVizitka.zeme} </p>
-      <p> Město: {dataToVizitka.mesto}</p>
-      <p> Účel cesty: {dataToVizitka.kamJedu} </p>
-      <p> Odjezd: {format(new Date(datumOdjezd), 'dd. MM. yyyy')}</p>
-      <p> Příjezd: {format(new Date(datumPrijezd), 'dd. MM. yyyy')}</p>
-      <p> Počet zavazadel {dataToVizitka.pocetZavazadel} </p>
-
+      <div className="tisk-hlavicka">
+        <h1>
+          {dataToVizitka.zeme}, {dataToVizitka.mesto}
+        </h1>
+        <p> {dataToVizitka.kamJedu} </p>
+        <p>
+          Od {format(new Date(datumOdjezd), 'dd. MM. yyyy')} do{' '}
+          {format(new Date(datumPrijezd), 'dd. MM. yyyy')}
+        </p>
+        <p> Počet zavazadel: {dataToVizitka.pocetZavazadel} </p>
+      </div>
       {dataKufrSeznam
         .sort((a, b) => a.id - b.id)
         .map((i, index) => (

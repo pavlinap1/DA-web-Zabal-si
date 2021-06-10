@@ -58,19 +58,18 @@ header {
   align-items: center;
 }
 
-button {
-  background: rgb(222, 245, 245);
+button,
+input[type='submit'] {
+  color: black;
+  background: lightgray;
   transition: 0.25s;
   min-width: 100px;
   border: 1px solid gray;
   height: 40px;
-  width: 130px;
-  border-radius: 20px;
+  border-radius: 17px;
 }
-button:hover {
-  background-color: rgb(112, 194, 194);
-}
-button:disabled {
-  background-color: lightgray;
-  cursor: initial;
+button:hover,
+input[type='submit']:hover {
+  background: gray;
+  color: white;
 }

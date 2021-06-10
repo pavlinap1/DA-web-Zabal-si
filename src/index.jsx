@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import Header from './Header';
 import './style.css';
 import Tisk from './Tisk';
 import Vizitka from './Vizitka';
@@ -124,7 +123,6 @@ const App = () => {
   const [appDataForm, setAppDataForm] = useState({
     kamJedu: 'K moři',
     mesto: 'praha',
-    typDopravy: 'Auto',
     odjezd: '2021-06-09',
     pocetZavazadel: '2',
     prijezd: '2021-06-19',
@@ -141,7 +139,6 @@ const App = () => {
     <>
       <div className="container hlavniStranka">
         <Router>
-          <Header />
           <Switch>
             <Route exact path="/">
               <Formular onFormOK={handleFormOK} />

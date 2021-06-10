@@ -2,4 +2,14 @@
   width: 15px;
   height: 15px;
   border: 2px solid black;
+  margin-right: 5px;
+  margin-top: 3px;
+}
+
+.zmena-seznamu {
+  list-style-type: none;
+}
+
+.polozky {
+  display: flex;
 }

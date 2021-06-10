@@ -23,13 +23,13 @@ const Sekce = ({ jmeno, data, onSekceZmena }) => {
             <li key={'il' + index}>
               {' '}
               {polozka}
-              <button
+              <img
+                className="krizek"
+                src="./assets/krizek.png"
                 onClick={() => {
                   handleOdebratPolozku(polozka);
                 }}
-              >
-                Odebrat položku
-              </button>
+              ></img>
             </li>
           ))}
           <input

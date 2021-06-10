@@ -1,9 +1,10 @@
 form {
-  background-color: lightblue;
+  background-color: rgb(168, 198, 243);
   width: 400px;
   padding: 10px;
   margin: 20px auto;
   border-radius: 10px;
+  display: block;
 }
 
 label {
@@ -14,19 +15,6 @@ label {
   text-align: left;
 }
 
-form button,
-form input[type='submit'] {
-  background: lightgray;
-  transition: 0.25s;
-  min-width: 100px;
-  border: 1px solid gray;
-  height: 40px;
-}
-form button:hover,
-form input[type='submit']:hover {
-  background: grey;
-  color: white;
-}
 .tlacitka {
   display: flex;
   justify-content: space-between;
@@ -35,10 +23,15 @@ form input[type='submit']:hover {
   padding-bottom: 10px;
   padding-top: 20px;
 }
-form {
-  display: block;
-}
 
 .form--closed {
   display: none;
+}
+
+.body {
+  text-align: center;
+}
+
+h1 {
+  padding-left: 15px;
 }
