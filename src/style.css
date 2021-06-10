@@ -38,6 +38,15 @@ img {
   align-items: center;
 }
 
+@media screen and (max-width: 500px) {
+  .container {
+    width: 70%;
+  }
+  .form {
+    width: 300px;
+  }
+}
+
 header,
 footer {
   padding-left: 2rem;

@@ -67,87 +67,92 @@ const Formular = ({ onFormOK }) => {
         </div>
         <button onClick={handleClick}>Vyplň si</button>
       </div>
-      <form
-        className={openForm ? 'form' : 'form--closed'}
-        onSubmit={handleSubmit}
-      >
-        <h1>Formulář</h1>
-        <label>
-          Cílová země:
-          <select onChange={(e) => setZeme(e.target.value)} value={zeme}>
-            {' '}
-            <VyberZeme />
-          </select>
-        </label>
-        <label>
-          Město:
-          <input
-            type="text"
-            onChange={(e) => setMesto(e.target.value)}
-            value={mesto}
-          ></input>
-        </label>
-        <label>
-          Účel cesty:
-          <select onChange={(e) => setKamJedu(e.target.value)} value={kamJedu}>
-            <option value="">Vyberte účel cesty</option>
+      <div className="form">
+        <form
+          className={openForm ? 'form' : 'form--closed'}
+          onSubmit={handleSubmit}
+        >
+          <h1>Formulář</h1>
+          <label>
+            Cílová země:
+            <select onChange={(e) => setZeme(e.target.value)} value={zeme}>
+              {' '}
+              <VyberZeme />
+            </select>
+          </label>
+          <label>
+            Město:
+            <input
+              type="text"
+              onChange={(e) => setMesto(e.target.value)}
+              value={mesto}
+            ></input>
+          </label>
+          <label>
+            Účel cesty:
+            <select
+              onChange={(e) => setKamJedu(e.target.value)}
+              value={kamJedu}
+            >
+              <option value="">Vyberte účel cesty</option>
 
-            {seznam.map((polozka) => (
-              <option key={polozka.name}> {polozka.name}</option>
-            ))}
-          </select>
-        </label>
-        <label>
-          Odjezd:
-          <input
-            type="date"
-            id="start"
-            min="2021-05-27"
-            max="2021-12-31"
-            onChange={(e) => setOdjezd(e.target.value)}
-          ></input>
-        </label>
-        <label>
-          Příjezd:
-          <input
-            type="date"
-            id="start"
-            min="2021-05-27"
-            max="2021-12-31"
-            onChange={(e) => setPrijezd(e.target.value)}
-          ></input>
-        </label>
-        <label>
-          Počet zavazadel:
-          <select
-            onChange={(e) => setPocetZavazadel(e.target.value)}
-            value={pocetZavazadel}
-          >
-            <option value={0}>0</option>
-            <option value={1}>1</option>
-            <option value={2}>2</option>
-            <option value={3}>3</option>
-          </select>
-        </label>
-        <div className="tlacitka">
-          <button onClick={handleResetClick} type="reset">
-            Zrušit
-          </button>
-          <button
-            type="submit"
-            disabled={
-              zeme === '' ||
-              mesto === null ||
-              pocetZavazadel === 0 ||
-              kamJedu === '' ||
-              odjezd === '' ||
-              prijezd === ''
-            }
-          >
-            OK
-          </button>
-        </div>
-      </form>
+              {seznam.map((polozka) => (
+                <option key={polozka.name}> {polozka.name}</option>
+              ))}
+            </select>
+          </label>
+          <label>
+            Odjezd:
+            <input
+              type="date"
+              id="start"
+              min="2021-05-27"
+              max="2021-12-31"
+              onChange={(e) => setOdjezd(e.target.value)}
+            ></input>
+          </label>
+          <label>
+            Příjezd:
+            <input
+              type="date"
+              id="start"
+              min="2021-05-27"
+              max="2021-12-31"
+              onChange={(e) => setPrijezd(e.target.value)}
+            ></input>
+          </label>
+          <label>
+            Počet zavazadel:
+            <select
+              onChange={(e) => setPocetZavazadel(e.target.value)}
+              value={pocetZavazadel}
+            >
+              <option value={0}>0</option>
+              <option value={1}>1</option>
+              <option value={2}>2</option>
+              <option value={3}>3</option>
+            </select>
+          </label>
+          <div className="tlacitka">
+            <button onClick={handleResetClick} type="reset">
+              Zrušit
+            </button>
+            <button
+              type="submit"
+              disabled={
+                zeme === '' ||
+                mesto === null ||
+                pocetZavazadel === 0 ||
+                kamJedu === '' ||
+                odjezd === '' ||
+                prijezd === ''
+              }
+            >
+              OK
+            </button>
+          </div>
+        </form>
+      </div>
     </>
   );
 };
