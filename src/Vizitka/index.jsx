@@ -50,16 +50,24 @@ const Vizitka = ({ dataToVizitka, onTiskOK }) => {
   return (
     <>
       <div className="vizitka">
-        <p> Cílová země: {dataToVizitka.zeme} </p>
-        <p> Město: {dataToVizitka.mesto}</p>
-        <p> Účel cesty: {dataToVizitka.kamJedu} </p>
-        <p> Odjezd: {format(new Date(datumOdjezd), 'dd. MM. yyyy')}</p>
-        <p> Příjezd: {format(new Date(datumPrijezd), 'dd. MM. yyyy')}</p>
-        <p> Počet zavazadel {dataToVizitka.pocetZavazadel} </p>
-        {kufrSeznam}
-        <button className="btn-tisk" onClick={handleClickTisk}>
-          Tisk
-        </button>
+        <div className="vizitka-hlavicka">
+          <p>
+            {' '}
+            Cílová země: {dataToVizitka.zeme}, {dataToVizitka.mesto}
+          </p>
+          <p> Účel cesty: {dataToVizitka.kamJedu} </p>
+          <p>
+            Od {format(new Date(datumOdjezd), 'dd. MM. yyyy')} do{' '}
+            {format(new Date(datumPrijezd), 'dd. MM. yyyy')}
+          </p>
+          <p> Počet zavazadel: {dataToVizitka.pocetZavazadel} </p>
+        </div>
+        <div>{kufrSeznam}</div>
+        <div className="vizitka-tisk">
+          <button className="btn-tisk" onClick={handleClickTisk}>
+            Tisk
+          </button>
+        </div>
       </div>
     </>
   );

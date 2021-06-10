@@ -1,11 +1,14 @@
-.seznam {
-  display: block;
-}
-
 .seznam--closed {
   display: none;
 }
 .btn-tisk {
   margin-top: 40px;
   text-align: center;
+}
+.vizitka-tisk,
+.vizitka-hlavicka {
+  text-align: center;
+}
+.kufr-seznam {
+  justify-content: center;
 }

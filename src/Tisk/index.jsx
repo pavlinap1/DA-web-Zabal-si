@@ -48,11 +48,13 @@ const Tisk = ({ dataToTisk: { dataToVizitka, dataKufrSeznam } }) => {
         </p>
         <p> Počet zavazadel: {dataToVizitka.pocetZavazadel} </p>
       </div>
-      {dataKufrSeznam
-        .sort((a, b) => a.id - b.id)
-        .map((i, index) => (
-          <ObsahKufru key={'il' + index} obsah={i} />
-        ))}
+      <div className="seznamy">
+        {dataKufrSeznam
+          .sort((a, b) => a.id - b.id)
+          .map((i, index) => (
+            <ObsahKufru key={'il' + index} obsah={i} />
+          ))}
+      </div>
     </>
   );
 };

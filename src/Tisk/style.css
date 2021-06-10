@@ -13,3 +13,6 @@
 .polozky {
   display: flex;
 }
+.tisk-hlavicka {
+  text-align: center;
+}
