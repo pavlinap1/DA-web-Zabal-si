@@ -14,7 +14,9 @@ body {
   margin: 0;
   background-size: 100%;
   background-position: center top;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  overflow: scroll;
 }
 
 img {
