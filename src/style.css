@@ -28,7 +28,7 @@ img {
   flex-direction: column;
 }
 .container {
-  width: 250px;
+  width: 70%;
   margin-right: auto;
   margin-left: auto;
   margin: 12rem auto 4rem auto;
