@@ -25,7 +25,7 @@ const Sekce = ({ jmeno, data, onSekceZmena }) => {
               {polozka}
               <img
                 className="krizek"
-                src="./assets/krizek.png"
+                src="./assets/smazat.png"
                 onClick={() => {
                   handleOdebratPolozku(polozka);
                 }}
@@ -116,13 +116,18 @@ const Kufr = ({ typPolozka, index, onKufrChange }) => {
 
   return (
     <>
-      <h3>{`Kufr ${index}`}</h3>
-      <div className="obrazekkufr" onClick={handleOpenSeznnam}>
-        <img src="assets/kufr.png" />
+      <div>
+        <div className="obrazekkufr" onClick={handleOpenSeznnam}>
+          <img src="assets/kufr.png" />
+        </div>
+        {openSeznam && (
+          <Polozka
+            onZmenaSeznamu={handleZmenaSeznamu}
+            typPolozka={stateSeznam}
+          />
+        )}
+        <h5>{`Zavazadlo ${index}`}</h5>
       </div>
-      {openSeznam && (
-        <Polozka onZmenaSeznamu={handleZmenaSeznamu} typPolozka={stateSeznam} />
-      )}
     </>
   );
 };

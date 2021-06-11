@@ -59,6 +59,7 @@ const Formular = ({ onFormOK }) => {
     <>
       <div className="body">
         <div>
+          <h1>Zabal si</h1>
           <p>
             Vítáme Vás na stránce Zabal si, která slouží k plánování dovolené či
             jiné cesty.

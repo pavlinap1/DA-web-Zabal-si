@@ -5,11 +5,13 @@
 html {
   font-family: 'Open Sans', sans-serif;
   background-color: white;
+  font-size: 20px;
 }
 
 body {
+  background-color: #cadbee;
+  background-image: url('./assets/mapa.jpg');
   margin: 0;
-  background-image: url(./assets/mapa.jpg);
   background-size: 100%;
   background-position: center top;
   background-repeat: no-repeat;
@@ -28,7 +30,7 @@ img {
   margin-right: auto;
   margin-left: auto;
   margin: 12rem auto 4rem auto;
-  background-color: white;
+  background-color: #f2f4f3;
   color: black;
   padding: 2rem;
   border-radius: 1rem;
@@ -43,7 +45,7 @@ img {
     width: 70%;
   }
   .form {
-    width: 300px;
+    width: 250px;
   }
 }
 
@@ -76,4 +78,8 @@ button:hover,
 input[type='submit']:hover {
   background: gray;
   color: white;
+}
+button:disabled {
+  color: gray;
+  background-color: lightgray;
 }
