@@ -5,16 +5,18 @@ import { format } from 'date-fns';
 const TiskSekce = ({ obsah, jmeno }) => {
   return (
     <>
-      <h4>{jmeno}</h4>
-      <div className="seznam">
-        <ul className="zmena-seznamu">
-          {obsah.map((polozka, index) => (
-            <li className="polozky" key={'il' + index}>
-              <div className="checkbox"></div>
-              {polozka}
-            </li>
-          ))}
-        </ul>
+      <div className="tisk">
+        <h4>{jmeno}</h4>
+        <div className="seznam">
+          <ul className="zmena-seznamu">
+            {obsah.map((polozka, index) => (
+              <li className="polozky" key={'il' + index}>
+                <div className="checkbox"></div>
+                {polozka}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </>
   );
@@ -22,7 +24,7 @@ const TiskSekce = ({ obsah, jmeno }) => {
 const ObsahKufru = ({ obsah }) => {
   return (
     <>
-      <h2>Kufr {obsah.id}</h2>
+      <h2>Zavazadlo {obsah.id}</h2>
       <TiskSekce obsah={obsah.cestovniDoklady} jmeno="Cestovní doklady" />
       <TiskSekce obsah={obsah.obleceni} jmeno="Oblečení" />
       <TiskSekce obsah={obsah.hygiena} jmeno="Hygiena" />

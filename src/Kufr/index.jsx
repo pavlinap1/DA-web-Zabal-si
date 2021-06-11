@@ -37,13 +37,17 @@ const Sekce = ({ jmeno, data, onSekceZmena }) => {
             onChange={(e) => setNovaPolozka(e.target.value)}
             type="text"
           ></input>
-          <button onClick={handleClickPolozka}>Přidat položku</button>
+          <img
+            className="plus"
+            src="./assets/plus.png"
+            onClick={handleClickPolozka}
+          ></img>
         </ul>
       </div>
     </>
   );
 };
-
+//Zkusila bych dát na přidání a odebrání plus a mínus
 const Polozka = ({ typPolozka, onZmenaSeznamu }) => {
   const handleSekceZmena = (nazev, data) => {
     onZmenaSeznamu(nazev, data);
