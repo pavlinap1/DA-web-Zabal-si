@@ -48,7 +48,7 @@ img {
   margin-top: 120px;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 800px) {
   .container {
     width: 60%;
   }
@@ -60,6 +60,13 @@ img {
   }
   button {
     width: 100px;
+  }
+  .obrazekkufr {
+    min-width: 130px;
+  }
+  .obrazekkufr:hover {
+    max-width: 150px;
+    cursor: pointer;
   }
 }
 

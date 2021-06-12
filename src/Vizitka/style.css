@@ -20,3 +20,6 @@ td {
   background-color: #cadbee;
   padding: 10px 5px;
 }
+tr {
+  border-radius: 5px;
+}

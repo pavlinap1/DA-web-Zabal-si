@@ -45,7 +45,7 @@ const Tisk = ({ dataToTisk: { dataToVizitka, dataKufrSeznam } }) => {
         </h2>
         <p> {dataToVizitka.kamJedu} </p>
         <p>
-          Od {format(new Date(datumOdjezd), 'dd. MM. yyyy')} do{' '}
+          {format(new Date(datumOdjezd), 'dd. MM. yyyy')} -
           {format(new Date(datumPrijezd), 'dd. MM. yyyy')}
         </p>
       </div>
