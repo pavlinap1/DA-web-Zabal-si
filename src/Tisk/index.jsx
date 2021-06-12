@@ -40,9 +40,9 @@ const Tisk = ({ dataToTisk: { dataToVizitka, dataKufrSeznam } }) => {
   return (
     <>
       <div className="tisk-hlavicka">
-        <h1>
+        <h2>
           {dataToVizitka.zeme}, {dataToVizitka.mesto}
-        </h1>
+        </h2>
         <p> {dataToVizitka.kamJedu} </p>
         <p>
           Od {format(new Date(datumOdjezd), 'dd. MM. yyyy')} do{' '}

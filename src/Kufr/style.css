@@ -16,13 +16,35 @@
   cursor: pointer;
 }
 
+.sekceKufr {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.polozkyKufr {
+  border-bottom: 0.5px solid #cadbee;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
 .krizek {
   width: 20px;
-  margin-left: 10px;
-  padding-top: 5px;
   cursor: pointer;
 }
 
-.plus {
-  width: 10px;
+.novaPolozka {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.inputPolozka {
+  width: 100%;
+}
+
+.pridatPolozku {
+  margin-left: 7px;
 }

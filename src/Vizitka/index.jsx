@@ -50,6 +50,7 @@ const Vizitka = ({ dataToVizitka, onTiskOK }) => {
   return (
     <>
       <div className="vizitka">
+        <h1>Zabal si</h1>
         <table>
           <tbody>
             <tr>
