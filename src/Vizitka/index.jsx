@@ -52,7 +52,6 @@ const Vizitka = ({ dataToVizitka, onTiskOK }) => {
       <div className="vizitka">
         <div className="vizitka-hlavicka">
           <p>
-            {' '}
             Cílová země: {dataToVizitka.zeme}, {dataToVizitka.mesto}
           </p>
           <p> Účel cesty: {dataToVizitka.kamJedu} </p>

@@ -121,6 +121,7 @@ const Kufr = ({ typPolozka, index, onKufrChange }) => {
   return (
     <>
       <div>
+        <h5>{`Zavazadlo ${index}`}</h5>
         <div className="obrazekkufr" onClick={handleOpenSeznnam}>
           <img src="assets/kufr.png" />
         </div>
@@ -130,7 +131,6 @@ const Kufr = ({ typPolozka, index, onKufrChange }) => {
             typPolozka={stateSeznam}
           />
         )}
-        <h5>{`Zavazadlo ${index}`}</h5>
       </div>
     </>
   );

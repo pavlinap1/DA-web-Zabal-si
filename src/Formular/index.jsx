@@ -64,7 +64,13 @@ const Formular = ({ onFormOK }) => {
             Vítáme Vás na stránce Zabal si, která slouží k plánování dovolené či
             jiné cesty.
           </p>
-          <p>Na začátku si můžete vyplnit formulář o vaší cestě.</p>
+          <p>Na začátku si prosím vyplňte formulář o vaší cestě.</p>
+          <p>
+            Následně se vám vytvoří vizitka s informacemi o cestě a množství
+            zavazadel, které jste si určili. Po kliknutí na kufr se zobrazí
+            seznamy, které si můžete upravit podle svého.
+          </p>
+          <p>Na poslední stránce si vytvoření seznam můžete vytisknout.</p>
         </div>
         <button onClick={handleClick}>Vyplň si</button>
       </div>
