@@ -32,7 +32,7 @@ img {
   margin-right: auto;
   margin-left: auto;
   margin: 12rem auto 4rem auto;
-  background-color: #f2f4f3;
+  background-color: white;
   color: black;
   padding: 2rem;
   border-radius: 1rem;
@@ -45,7 +45,7 @@ img {
 
 @media screen and (min-width: 1000px) {
   .container {
-    width: 70%;
+    width: 60%;
   }
   .form {
     width: 70%;
@@ -56,10 +56,6 @@ img {
   button {
     width: 100px;
   }
-  .obrazekkufr:hover {
-    width: 120px;
-    height: 120px;
-  }
 }
 
 header,
@@ -68,31 +64,24 @@ footer {
   padding-right: 2rem;
 }
 
-/* ---------- konec globálních stylů ---------- */
-/*
-header {
-  padding-top: 1px;
-  height: 400px;
-  background-color: white;
-}
-*/
-
 button,
 input[type='submit'] {
   color: black;
-  background: lightgray;
+  background: white;
   transition: 0.25s;
-  min-width: 50px;
-  border: 1px solid gray;
+  min-width: 70px;
+  border: 2px solid #cadbee;
   height: 40px;
   border-radius: 17px;
 }
 button:hover,
 input[type='submit']:hover {
-  background: gray;
+  background: #cadbee;
   color: white;
+  border: 2px solid white;
 }
 button:disabled {
   color: gray;
   background-color: lightgray;
+  border: none;
 }

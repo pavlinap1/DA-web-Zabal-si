@@ -1,12 +1,26 @@
-.obrazekkufr {
-  width: 100px;
+.kufrVizitka {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
+
+.obrazekkufr {
+  max-width: 100px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.obrazekkufr:hover {
+  max-width: 120px;
+  cursor: pointer;
+}
+
 .krizek {
   width: 20px;
   margin-left: 10px;
   padding-top: 5px;
+  cursor: pointer;
 }
 
 .plus {

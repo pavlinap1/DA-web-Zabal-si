@@ -121,16 +121,20 @@ const Kufr = ({ typPolozka, index, onKufrChange }) => {
   return (
     <>
       <div>
-        <div className="obrazekkufr" onClick={handleOpenSeznnam}>
-          <img src="assets/kufr.png" />
+        <div className="kufrVizitka">
+          <div className="obrazekkufr" onClick={handleOpenSeznnam}>
+            <img src="assets/kufr.png" />
+          </div>
         </div>
-        {openSeznam && (
-          <Polozka
-            onZmenaSeznamu={handleZmenaSeznamu}
-            typPolozka={stateSeznam}
-          />
-        )}
-        <h5>{`Zavazadlo ${index}`}</h5>
+        <div className="kufrOpenSeznam">
+          {openSeznam && (
+            <Polozka
+              onZmenaSeznamu={handleZmenaSeznamu}
+              typPolozka={stateSeznam}
+            />
+          )}
+        </div>
+        <h4 className="kufrVizitka">{`Zavazadlo ${index}`}</h4>
       </div>
     </>
   );
