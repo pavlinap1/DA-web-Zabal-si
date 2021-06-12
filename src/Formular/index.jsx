@@ -149,6 +149,7 @@ const Formular = ({ onFormOK }) => {
                 zeme === '' ||
                 mesto === '' ||
                 pocetZavazadel === 0 ||
+                pocetZavazadel === '0' ||
                 kamJedu === '' ||
                 odjezd === '' ||
                 prijezd === ''
