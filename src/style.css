@@ -69,6 +69,12 @@ img {
     max-width: 150px;
     cursor: pointer;
   }
+  footer {
+    padding-bottom: 5px;
+    font-size: 16px;
+    width: 60%;
+    margin: 0 auto;
+  }
 }
 
 header,
@@ -97,4 +103,8 @@ button:disabled {
   color: gray;
   background-color: lightgray;
   border: none;
+}
+
+footer {
+  text-align: center;
 }
