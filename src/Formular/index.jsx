@@ -68,9 +68,9 @@ const Formular = ({ onFormOK }) => {
           <p>
             Následně se vám vytvoří vizitka s informacemi o cestě a množství
             zavazadel, které jste si určili. Po kliknutí na kufr se zobrazí
-            seznamy, které si můžete upravit podle svého.
+            seznamy, které si můžete upravit podle sebe.
           </p>
-          <p>Na poslední stránce si vytvoření seznam můžete vytisknout.</p>
+          <p>Na poslední stránce si vytvořený seznam můžete vytisknout.</p>
         </div>
         <button onClick={handleClick}>Vyplň si</button>
       </div>
@@ -112,7 +112,7 @@ const Formular = ({ onFormOK }) => {
             <input
               type="date"
               id="start"
-              min="2021-05-27"
+              min="2021-06-15"
               max="2021-12-31"
               onChange={(e) => setOdjezd(e.target.value)}
             ></input>
@@ -122,7 +122,7 @@ const Formular = ({ onFormOK }) => {
             <input
               type="date"
               id="start"
-              min="2021-05-27"
+              min="2021-06-15"
               max="2021-12-31"
               onChange={(e) => setPrijezd(e.target.value)}
             ></input>
