@@ -79,7 +79,6 @@ const Formular = ({ onFormOK }) => {
           className={openForm ? 'form' : 'form--closed'}
           onSubmit={handleSubmit}
         >
-          <h1>Formulář</h1>
           <label>
             Cílová země:
             <select onChange={(e) => setZeme(e.target.value)} value={zeme}>
@@ -148,7 +147,7 @@ const Formular = ({ onFormOK }) => {
               type="submit"
               disabled={
                 zeme === '' ||
-                mesto === null ||
+                mesto === '' ||
                 pocetZavazadel === 0 ||
                 kamJedu === '' ||
                 odjezd === '' ||

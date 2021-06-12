@@ -5,8 +5,18 @@
   margin-top: 40px;
   text-align: center;
 }
-.vizitka-tisk,
-.vizitka-hlavicka {
+.vizitka,
+.vizitka-tisk {
   text-align: center;
 }
 
+table {
+  width: 100%;
+}
+th,
+td {
+  text-align: left;
+  border: 3px solid white;
+  background-color: #cadbee;
+  padding: 10px 5px;
+}

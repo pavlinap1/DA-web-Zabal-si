@@ -18,9 +18,9 @@ const Sekce = ({ jmeno, data, onSekceZmena }) => {
     <>
       <div>
         <h2 className="nazevSekce">{jmeno}</h2>
-        <ul>
+        <ul className="sekceKufr">
           {data.map((polozka, index) => (
-            <li key={'il' + index}>
+            <li className="polozkyKufr" key={'il' + index}>
               {' '}
               {polozka}
               <img
@@ -32,16 +32,17 @@ const Sekce = ({ jmeno, data, onSekceZmena }) => {
               ></img>
             </li>
           ))}
-          <input
-            value={novaPolozka}
-            onChange={(e) => setNovaPolozka(e.target.value)}
-            type="text"
-          ></input>
-          <img
-            className="plus"
-            src="./assets/plus.png"
-            onClick={handleClickPolozka}
-          ></img>
+          <div className="novaPolozka">
+            <input
+              className="inputPolozka"
+              value={novaPolozka}
+              onChange={(e) => setNovaPolozka(e.target.value)}
+              type="text"
+            ></input>
+            <button className="pridatPolozku" onClick={handleClickPolozka}>
+              Přidat
+            </button>
+          </div>
         </ul>
       </div>
     </>
@@ -121,16 +122,20 @@ const Kufr = ({ typPolozka, index, onKufrChange }) => {
   return (
     <>
       <div>
-        <h5>{`Zavazadlo ${index}`}</h5>
-        <div className="obrazekkufr" onClick={handleOpenSeznnam}>
-          <img src="assets/kufr.png" />
+        <div className="kufrVizitka">
+          <div className="obrazekkufr" onClick={handleOpenSeznnam}>
+            <img src="assets/kufr.png" />
+          </div>
+          <h4>{`Zavazadlo ${index}`}</h4>
         </div>
-        {openSeznam && (
-          <Polozka
-            onZmenaSeznamu={handleZmenaSeznamu}
-            typPolozka={stateSeznam}
-          />
-        )}
+        <div className="kufrOpenSeznam">
+          {openSeznam && (
+            <Polozka
+              onZmenaSeznamu={handleZmenaSeznamu}
+              typPolozka={stateSeznam}
+            />
+          )}
+        </div>
       </div>
     </>
   );
