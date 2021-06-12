@@ -141,7 +141,7 @@ const Formular = ({ onFormOK }) => {
               type="submit"
               disabled={
                 zeme === '' ||
-                mesto === null ||
+                mesto === '' ||
                 pocetZavazadel === 0 ||
                 kamJedu === '' ||
                 odjezd === '' ||
