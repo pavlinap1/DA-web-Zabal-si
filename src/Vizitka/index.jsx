@@ -54,8 +54,8 @@ const Vizitka = ({ dataToVizitka, onTiskOK }) => {
         <table>
           <tbody>
             <tr>
-              <th>Cílová destinace</th>
-              <th>
+              <th className="zaobleni-tab-1">Cílová destinace</th>
+              <th className="zaobleni-tab-2">
                 {dataToVizitka.zeme}, {dataToVizitka.mesto}
               </th>
             </tr>
@@ -71,8 +71,8 @@ const Vizitka = ({ dataToVizitka, onTiskOK }) => {
               </th>
             </tr>
             <tr>
-              <th>Počet zavazadel</th>
-              <th>{dataToVizitka.pocetZavazadel} </th>
+              <th className="zaobleni-tab-3">Počet zavazadel</th>
+              <th className="zaobleni-tab-4">{dataToVizitka.pocetZavazadel} </th>
             </tr>
           </tbody>
         </table>

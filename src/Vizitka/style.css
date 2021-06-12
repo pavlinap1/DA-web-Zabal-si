@@ -20,6 +20,16 @@ td {
   background-color: #cadbee;
   padding: 10px 5px;
 }
-tr {
-  border-radius: 5px;
+
+.zaobleni-tab-1 {
+  border-radius: 10px 5px 5px 5px;
+}
+.zaobleni-tab-2 {
+  border-radius: 5px 10px 5px 5px;
+}
+.zaobleni-tab-3 {
+  border-radius: 5px 5px 5px 10px;
+}
+.zaobleni-tab-4 {
+  border-radius: 5px 5px 10px 5px;
 }
